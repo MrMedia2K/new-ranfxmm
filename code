@@ -763,11 +763,11 @@ audioreverb 0 1 60 0.5
 audioreverb 0 1 70 0.5
 audiodestroy 0
 }}{set:fx|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iscript:load {iv} 0
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
 get 0 height h
 get 0 duration d
 get 0 framecount fc
 {get:fx}
 convert 0 video/mp4
-render 0}
+render 0}|But something went wrong. It's most likely a timeout or bad syntax.}
