@@ -763,22 +763,11 @@ audioreverb 0 1 60 0.5
 audioreverb 0 1 70 0.5
 audiodestroy 0
 }}{set:fx|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{sh:
-load {iv}
-sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
-fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
-d=$(ffprobe -i $FILE_1 -show_entries format=duration -v quiet -of csv="p=0")
-w=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of default=nw=1:nk=1 $FILE_1)
-h=$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of default=nw=1:nk=1 $FILE_1)
-fc=$(ffprobe -v error -select_streams v:0 -show_entries stream=nb_frames -of default=nokey=1:noprint_wrappers=1 $FILE_1)
-ffmpeg -i $FILE_1 {get:fx} ./output/$(basename $FILE_1)}
-{iscript:load FILE_1
-convert 0 video/mp4
-render 0}|{iscript:load {iv} 0
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iscript:load {iv} 0
 get 0 width w
 get 0 height h
 get 0 duration d
 get 0 framecount fc
 {get:fx}
 convert 0 video/mp4
-render 0}}
+render 0}
