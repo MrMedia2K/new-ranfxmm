@@ -1,5 +1,5 @@
-this is the new ranfxmm
-{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom}
+yet another ranfx+ remake.
+{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom}{set:h|{range:0|1}}{set:m|}{set:o|1}
 {set:e|Fallback Effect}{set:fx|{choose:{set:e|G-Major 4}
 gradientmap 0 rgba(0,0,0,0),0.5 black
 multipitch 0 0,5|{set:e|CoNfUsIoN}
@@ -154,7 +154,7 @@ hueshifthsv 0 0.62*360
 multipitch 0 0,-7|{set:e|Happy}
 invert 0
 hueshifthsv 0 180
-vegaswave 0 0 0 0 0 0 6.28 0.113 1.19
+vegaswave 0 0 0 0 0 0 {if:{get:h}|=|0|then:6.28 0.113 1.19|else:6.85 0.092 2.205}
 multipitch 0 4,12|{set:e|G-Major 5}
 invertrgba 0 0 1 1
 multipitch 0 0,4|{set:e|Angry}
@@ -251,7 +251,7 @@ tvsimulator 0 0.75
 multipitch 0 -2|{set:e|Diamond Major} hueshifthsv 0 21.6
 flop 0
 multipitch 0 2|{set:e|Boul123 Major}
-hueshifthsv 120 1.3
+hueshifthsv 120 30
 vegaswave 0 0 6.09 0.018 2.692
 multipitch 0 3|{set:e|Cute} hueshifthsv 0 120
 pinchpunch 0 1
@@ -311,7 +311,7 @@ hueshifthsv 0 -60 2
 gradientmap rgba(0,0,0,0),0.5 black,1
 multipitch 0 -9,-2,3,7,10,15|{G-Major 13}
 swaprgba 0 bgr
-hueshifthsv 0 1.333
+hueshifthsv 0 0 33.33
 gradientmap rgba(0,0,0,0),0.5 black,1
 multipitch 0 0,3,6,9,12|{set:e|G-Major 14}
 gradientmap 0 blue black
@@ -326,7 +326,7 @@ haah 0
 pinchpunch 0 1
 multipitch 0 0,3
 volume 0 2|{set:e|G-Major 18}
-hueshifthsv 0 0 2
+hueshifthsv 0 0 100
 multipitch 0 -8,0|{set:e|G-Major 19}
 swaprgba 0 bgr
 hueshifthsv 0 180
@@ -349,11 +349,12 @@ multipitch 0 -36,-29,-24,-20,-17,-12|{set:e|IHTX Pinch}
 pinchpunch 0 -0.5
 multipitch 0 -2|{set:e|Rotation Wave} foreachframe 0 0 fc “rotate 0x -180*{get:idx}/fc none true”
 vegaswave 0 0 2 0.1 0 0 0 0 0
-multipitch 0 -4|{set:e|Crazy Slow Killed}
+multipitch 0 -4|{set:e|Crazy Slow Killed{if:{get:h}|=|0|then: (No Speed)}}
 hueshifthsv 0 60
 pinchpunch 0 1
 vegaswave 0 0 2 0.1 0 0 0 0 0
-vegaswave 0 0 0 0 0 0 2 0.1 0|{set:e|Ripple Pitch}
+vegaswave 0 0 0 0 0 0 2 0.1 0
+{if:{get:h}|=|1|then:speed 0 0.25}|{set:e|Ripple Pitch}
 hueshifthsv 0 -120
 detunnel 0
 wiggle 0 right 30 4
@@ -424,14 +425,345 @@ speed 0 0.25|{set:e|G-Major Mirror Top}
 speed 0 2
 invert 0
 haah 0
-woow 0|{set:e|ranfx+3 Special}
+woow 0|{set:e|ranfxmm Special}
 tvsimulator 0 0.75
 swaprgba 0 rbg
 hueshifthsv 0 10
 vegaswave 0 0 0 0 0 0 2 0.075 0
-multipitch 0 0,12,24,-5
+multipitch 0 0,12,24,-5|{set:e|Water Sounds}
+hueshifthsv 0 120 75
+vegaswave 0 0 1 0.1 0 0 1 0.1 0
+vocode 0 0
+vocode 0 0
+vocode 0 0|{set:e|Black And White Chorded}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1562993603238690896/convert.5cb4f529.mp3 bnw
+vocode 0 bnw
+gradientmap 0 black white black white|{set:e|Wat X (PositiveNull99)}
+foreachframe 0 0 fc “cover 0 w/((({get:idx}/fc)**2)+1) h”
+foreachframe 0 0 fc “gradientmap 0 rgba(0,0,0,255*{get:idx}/fc) rgba(255,255,255,255*{get:idx}/fc) rgba(0,0,0,255*{get:idx}/fc)”|{set:e|Clearer 2}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1562995216967925801/convert.21fa4ec8.mp3 ct
+gradientmap 0 #2fff00 #00ffff #ffff00 #ffffff #ff0000 #ff80f6 #000000 #64e132 #ffffff
+vocode 0 ct|{set:e|Group}
+load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 gp
+vocode 0 gp
+gradientmap 0 black #00ffff blue black|{set:e|Autovocoding}
+gradientmap 0 blue green black white
+copy 0 1
+multipitch 1 -12
+vocode 0 1|{set:e|Opposite Crazy Slow Killed}
+speed 0 4
+multipitch 0 -6
+hueshifthsv 0 60
+pinchpunch 0 -1
+vegaswave 0 0 4 0.1 3.141 0 0 0 0
+vegaswave 0 0 0 0 0 0 4 0.1 3.141|{set:e|Stupid}
+speed 0 3.5
+reverse 0
+edgedetect 0
+invert 0|{set:e|Rehappy}
+multipitch 0 -8,0
+hueshifthsv 0 180
+invert 0
+vegaswave 0 0 0 0 0 0 6.85 0.092 2.205
+rotate 0 90
+cover 0 w h
+huecurvergba 0 blue 0 0.8
+speed 0 0.5|{set:e|Wat X (HandyClock536)}
+{set:m|this was almost the first ffmpeg effect here}
+invert 0
+foreachframe 0 0 fc "distort 0x perspective 0 0 w*idx/fc 0 w 0 w-w*idx/fc 0 w h w-w*idx/fc h 0 h w*idx/fc h"|{set:e|Ultra Eyes}
+ffmpeg 0 -vf geq=lum='p(X,Y)*2'
+hueshifthsv 0 180
+multipitch 0 8,3,-2|{set:e|Cented X}
+hueshiftccs 0 10
+hueshifthsv 0 -5
+vegaswave 0 0 10 0.01 0 0 10 0.01 0
+multipitch 0 0.01|{set:e|Clearer Helium}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563274750015316019/convert.c49cd2a2.mp3 sfx
+gradientmap 0 #00ff00 blue cyan red white pink yellow #00ff00 black
+vocode 0 sfx|{set:e|Power}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563274965892210879/convert.b12b0411.mp3 car
+gradientmap 0 pink blue cyan
+vocode 0 car|{set:e|Loudness}
+gradientmap 0 #ff8000 black red
+audiodestroy 0|{set:e|RjGunner111 Major}
+flop 0
+invert 0
+hueshifthsv 0 0.3*360
+multipitch 0 -12,-5,0,4,7,12
+multipitch 0 -24|{set:e|G-Major 2015}
+multipitch 0 -24,-17,-12,-8,-5,0|{set:e|G-Major 74}
+contrastmultiply 0 -1
+pinchpunch 0 0.5
+multpitch 0 14,9,-10|{set:e|You Wiggled X}
+hueshifthsv 0 0.168*360
+haah 0
+vegaswave 0 0 10 0.03 0.8 0 10 0.03 0.8
+multipitch 0 14|{set:e|Mystery Effect}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563275135908319352/convert.00a522b1.mp3 car
+hueshiftccs 0 180
+flop 0
+vocode 0 car|{set:e|Talking Of Flutes}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563275349079629885/convert.04799698.mp3 car
+gradientmap 0 pink #00ff00 cyan white
+vocode 0 car|{set:e|Videoup V0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563275977549815850/convert.97d7b14b.mp3 car
+gradientmap 0 white blue pink #00ff00 black
+vocode 0 car|{set:e|Videoup V1}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563276110366769313/convert.a1cffb28.mp3 car
+gradientmap 0 white blue black
+vocode 0 car|{set:e|PowerCityMidnight}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563276286720348242/convert.2c9c4297.mp3 car
+gradientmap 0 black #00144b black #fcff5a
+vocode 0 car|{set:e|PowerCityNight}
+load https://cdn.discordapp.com/attachments/1397572473158893578/1409462730129281075/convert.mp3 car
+gradientmap 0 blue black yellow black
+vocode 0 car|{set:e|X Is Really Dizzy}
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
+gradientmap 0 black blue blue black blue black
+vegaswave 0 0 5.4 0.05 0 0 5.4 0.05 0
+haah 0
+vocode 0 car
+ffmpeg 0 -af vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1 -c:v ffv1 -c:a pcm_s16le -preset ultrafast|{set:e|X Is High}
+foreachframe 0 0 fc “vegaswave 0x 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc”
+ffmpeg 0 -af vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1 -c:v ffv1 -c:a pcm_s16le -preset ultrafast|{set:e|X Is Partying}
+hueshifthsv 0 180
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+foreachframe 0 0 fc “vegaswave 0x 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc”
+multipitch 0 1|{set:e|LTKC Map}
+gradientmap 0 red yellow black
+multipitch 0 1|{set:e|Cold Major}
+gray 0
+ffmpeg 0 -vf curves=r=0/0 0.3333333333333333/0 0.6666666666666666/0 1/0:g=0/0.0196078431372549 0.3333333333333333/0.19607843137254902 0.6666666666666666/0.0196078431372549 1/0.0392156862745098:b=0/0.3176470588235294 0.3333333333333333/0.3333333333333333 0.6666666666666666/0.26666666666666666 1/0.8274509803921568
+multipitch 0 -2|{set:e|Ares 6.0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563277333274562792/convert.dc9b29f4.mp3 car
+gradientmap 0 rgb(239,222,205) rgb(254,200,50) (254,0,200) rgb(255,182,193) black
+haah 0
+tvsimulator 0 0.85
+vocode 0 car|{set:e|Phat}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563277581325836469/convert.482fb3d3.mp3 sfx
+foreachframe 0 0 fc “swirl 0x -360*idx/fc”
+vegaswave 0 0 0 0 0 0 0 0.68 0.448
+tvsimulator 0 0.75
+foreachframe 0 0 fc “swirl 0x 360*idx/fc”
+audioputreplace 0 sfx|{set:e|Phased 4.0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563277758740697158/convert.83edb291.mp3 car
+gradientmap 0 black rgb(28,255,0) white rgb(7,255,217)
+vocode 0 car|{set:e|Videoup V2.1}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563277893419794432/convert.d4fca36b.mp3 car
+gradientmap 0 rgb(160,18,139) rgb(0,255,176) rgb(0,0,127)
+tvsimulator 0 0.95 4
+vocode 0 car|{set:e|Hungarain Power}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563278017206161570/convert.1f6a57b7.mp3 car
+gradientmap 0 red white green
+vocode 0 car|{set:e|Not Clearer}
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
+hueshifthsv 0 0 -50
+tvsimulator 0 0.75
+vocode 0 car|{set:e|Fat Duld}
+pinchpunch 0 1
+multipitch 0 -8|{set:e|Extremely High Pitch X10}
+pinchpunch 0 -1
+pinchpunch 0 -1
+multipitch 0 36|{set:e|A-Major}
+invert 0
+hueshifthsv 0 4.25*360
+waaw 0
+swirl 0 130
+multipitch 0 5.73,10.5|{set:e|B-Major}
+hueshiftccs 0 257.143
+tvsimulator 0 0.75
+multipitch 0 2.5
+audiovibrato 0 20 0.5|{set:e|C-Major}
+vegaswave 0 0 5.4 0.05 0 0 5.4 0.05 0
+invert 0
+hueshiftccs 0 80
+multipitch 0 2.5
+audiotremolo 0 15 25|{set:e|D-Major}
+gradientmap 0 rgb(117,7,68) rgb(200,29,157) rgb(124,35,190) rgb(17,218,253) rgb(120,177,62) rgb(129,219,84)|{set:e|Heat Overload}
+gradientmap 0 rgb(117,7,68) rgb(200,29,157) rgb(124,35,190) rgb(17,218,253) rgb(120,177,62) rgb(129,219,84)
+ffmpeg 0 -af bass=g=10:f=500|{set:e|E-Major}
+copy 0 1
+volume 1 0.2
+multipitch 0 -12,-5,0,4.7,12
+invert 1
+cover 1 w/1.02 h/1.02
+resize 1 w h
+overlay 0 1 0 0 #000000 0 0 50|{set:e|F-Major}
+tvsimulator 0 0.75
+hueshiftccs 115.102
+invert 0
+vegaswave 0 0 0 0 0 0 10 0.04 0.8
+audiovibratio 0 20 0.5|{set:e|L-Major}
+invert 0
+multipitch 0 -8,-6,4,9|{set:e|M-Major}
+invert 0
+pinchpunch 0 -0.75
+zoomblur 0 1.1
+multipitch 0 -12,-7|{set:e|N-Major}
+edgedetect 0
+gray 0
+multipitch 0 0,5,10,15|{set:e|O-Major}
+invert 0
+hueshifthsv 0 0.15*360
+hooh 0
+multipitch 0 -1,-2,-3|{set:e|P-Major}
+invert 0
+hueshifthsv 0 180
+vegaswave 0 0 10 0.04 0
+tvsimulator 0 0.8
+multipitch 0 -6,4|{set:e|Q-Major}
+swirl 0
+foreachframe 0 0 fc “rotate 0x 360*idx/fc none true”
+foreachframe 0 0 fc “cover 0 w/5*((1-idx/fc)*4+1) h/5*((1-idx/fc)*4+1)”
+hueshifthsv 0 100
+multipitch 0 3.648,4.08|{set:e|S-Major}
+invert 0
+hueshiftccs 0 293.878
+tvsimulator 0 0.75
+vegaswave 0 0 5.4 0.05 0 0 5.4 0.05 0
+multipitch 0 -12
+audiovibrato 0 20 0.5|{set:e|V-Major}
+invert 0
+hueshifthsv 0
+waaw 0
+multipitch 0 -9,3,9|{set:e|W-Major}
+invert 0
+flop 0
+create 1 w*0.152 h 0 0 0 255
+join 0 1
+haah 0
+crop 0 w h
+waaw 0
+hueshiftccs 0 102.857
+multipitch 0 -12,-7,-3,-2|{set:e|X-Major}
+gradientmap 0 red black
+ffmpeg 0 -vf geq=’p(X,mod(Y+T/2.666*H,H))’
+tvsimulator 0 0.75
+multipitch 0 0,1|{set:e|Y-Major}
+tvsimulator 0 0.75
+invert 0
+hueshifthsv 0 270
+haah 0
+multipitch 0 -8,-9|{set:e|Z-Major}
+invert 0
+hueshifthsv 0 0.15*460
+haah 0
+create 1 w*0.272 h 0 0 0 255
+join 0 1
+haah 0
+crop 0 w w
+flop 0
+create 2 w h/3 0 0 0 255
+join 0 1 true
+woow 0
+crop 0 w h
+hooh 0
+multipitch 0 -8,-4,0|{set:e|R-Major}
+gradientmap 0 rgba(0,0,0,0),0.45 black,0.55
+hueshifthsv 0 0 -65 -33
+copy 0 1
+flop 0
+overlay 0 1 0 0 #ffffff 0.1 0.1 90
+multipitch 0 -12,-7,0,5,12,17|{set:e|Mirror And Other}
+copy 0 1
+volume 1 0
+flop 1
+overlay 0 1 0 0 #000000 0 0 50
+multipitch 0 -8,-7|{set:e|Vicious G-Major}
+tvsimulator 0 0.75
+cover 0 w h/2
+hueshift 0 180
+invert 0
+multipitch 0 -3.86,-8.14
+resize 0 w h|{set:e|G-Major 200}
+haah 0
+hueshifthsv 0 0.175*360
+vegaswave 0 0 0 0 0 0 0 3.8 0.098 3.776
+multipitch 0 -7,-3,0|{set:e|H-Major 200}
+hueshifthsv 0 0.6*360
+vegaswave 0 0 0 0 0 0 3.8 0.1 0
+multipitch 0 -3.5|{set:e|Painis Major}
+hueshifthsv 0 -120
+pinchpunch 0 -1 0.4215 0.4445 0.511 0.511
+pinchpunch 0 -1 0.665 0.4545 0.435 0.435
+multipitch 0 -1.5|{set:e|Cry}
+invert 0
+hueshifthsv 0 60
+vegaswave 0 0 0 0 0 0 0 3.8 0.098 3.776
+multipitch 0 0,-4.5|{set:e|Custom Major 3}
+hueshifthsv 0 0.475*360
+haah 0
+multipitch 0 0,0.1|{set:e|Custom Major 333}
+invert 0
+rotate 0 -2 none true
+sharpen 0
+multipitch 0 0,-0.2|{set:e|Super Custom Major 3}
+hueshifthsv 0 0.525*360
+tvsimulator 0.5 4
+haah 0
+multipitch 0 0,0.1,0.2,0.3|{set:e|Shock}
+invert 0
+hueshifthsv 0 180
+vegaswave 0 0 0 0 0 0 1 0.1 0
+multipitch 0 0,12|{set:e|High Major}
+hueshifthsv 0 120
+multipitch 0 3|{set:e|Fast Voice}
+speed 0 1.333
+hueshifthsv 0 180
+waaw 0
+multipitch 0 5|{set:e|Dead Voice}
+{set:o|2}
+hueshiftccs 0 180
+hueshifhsv 0 -120
+haah 0
+multipitch 0 -7
+speed 0 0.666|{set:e|CoNfUsIoN + G-Major 4}
+{set:o|2}
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+invert 0
+hueshifthsv 0 180
+multipitch 0 0,5
+audioreverse 0|{set:e|1000 Flutes}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563275349079629885/convert.04799698.mp3 sfx
+foreachframe 0 0 fc "rotate 0 -20*idx/fc none true"
+swirl 0 -130
+audioputreplace 0 sfx|{set:e|Colorama}
+gradientmap 0 red yellow #00ff00 cyan blue pink red
+audioreverb 0 1 10 0.5
+audioreverb 0 1 20 0.5
+audioreverb 0 1 30 0.5
+audioreverb 0 1 40 0.5
+audioreverb 0 1 50 0.5
+audioreverb 0 1 60 0.5
+audioreverb 0 1 70 0.5|{set:e|X Got Corrupted}
+hueshifthsv 0 180
+ffmpeg 0 -vf convolution='20 0 0 0 1 0 0 0 -20:20 0 0 0 1 0 0 0 -20:20 0 0 0 1 0 0 0 -20:20 0 0 0 1 0 0 0 -20' tvsimulator 0 0.75 4
+contrastmultiply 0 1.3
+audioreverb 0 1 10 0.5
+audioreverb 0 1 20 0.5
+audioreverb 0 1 30 0.5
+audioreverb 0 1 40 0.5
+audioreverb 0 1 50 0.5
+audioreverb 0 1 60 0.5
+audioreverb 0 1 70 0.5
+ffmpeg 0 -af atempo=2,atempo=4,asetrate=$sr/4,atempo=0.5,aresample=$sr
+multipitch 0 24
+multipitch 0 -12,-5,0,4,7,12
+copy 0 1
+multipitch 1 -12
+vocode 0 1|{set:e|Loudness 2.0}
+gradientmap 0 rgba(255,255,0,0) yellow black red
+audioreverb 0 1 10 0.5
+audioreverb 0 1 20 0.5
+audioreverb 0 1 30 0.5
+audioreverb 0 1 40 0.5
+audioreverb 0 1 50 0.5
+audioreverb 0 1 60 0.5
+audioreverb 0 1 70 0.5
+audiodestroy 0
 }}{set:fx|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}
-you got **{get:e}!**{iferror:{sh:
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{sh:
 load {iv}
 sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
 fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
