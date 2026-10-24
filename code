@@ -615,7 +615,7 @@ hooh 0
 multipitch 0 -1,-2,-3|{set:e|P-Major}
 invert 0
 hueshifthsv 0 180
-vegaswave 0 0 10 0.04 0
+vegaswave 0 0 10 0.04 0 0 0 0 0
 tvsimulator 0 0.8
 multipitch 0 -6,4|{set:e|Q-Major}
 swirl 0
@@ -630,7 +630,7 @@ vegaswave 0 0 5.4 0.05 0 0 5.4 0.05 0
 multipitch 0 -12
 audiovibrato 0 20 0.5|{set:e|V-Major}
 invert 0
-hueshifthsv 0 180
+hueshifthsv 0
 waaw 0
 multipitch 0 -9,3,9|{set:e|W-Major}
 invert 0
@@ -684,7 +684,7 @@ multipitch 0 -3.86,-8.14
 resize 0 w h|{set:e|G-Major 200}
 haah 0
 hueshifthsv 0 0.175*360
-vegaswave 0 0 0 0 0 0 0 3.8 0.098 3.776
+vegaswave 0 0 0 0 0 0 3.8 0.098 3.776
 multipitch 0 -7,-3,0|{set:e|H-Major 200}
 hueshifthsv 0 0.6*360
 vegaswave 0 0 0 0 0 0 3.8 0.1 0
@@ -695,7 +695,7 @@ pinchpunch 0 -1 0.665 0.4545 0.435 0.435
 multipitch 0 -1.5|{set:e|Cry}
 invert 0
 hueshifthsv 0 60
-vegaswave 0 0 0 0 0 0 0 3.8 0.098 3.776
+vegaswave 0 0 0 0 0 0 3.8 0.098 3.776
 multipitch 0 0,-4.5|{set:e|Custom Major 3}
 hueshifthsv 0 0.475*360
 haah 0
@@ -775,7 +775,7 @@ hueshifthsv 0 120
 flop 0
 vegaswave 0 -18.85 10 0.01 0 18.85 10 0.01 0
 multipitch 0 0,-5
-}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
+}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
 get 0 height h
