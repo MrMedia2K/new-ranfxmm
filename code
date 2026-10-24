@@ -775,7 +775,7 @@ hueshifthsv 0 120
 flop 0
 vegaswave 0 -18.85 10 0.01 0 18.85 10 0.01 0
 multipitch 0 0,-5
-}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}
+}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
 get 0 height h
