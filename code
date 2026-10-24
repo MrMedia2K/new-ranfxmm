@@ -891,7 +891,7 @@ flop 0
 swirl 0 60
 multipitch 0 -7,12|{set:e|TAITOT525’s G-Major 5}
 gradientmap 0 yellow black cyan
-multipitch 0 -7,12| {set:e|G-Major 262 (freakzinga)}
+multipitch 0 -7,12|{set:e|G-Major 262 (freakzinga)}
 hueshifthsv 0 180
 pinchpunch 0 1
 motionblur 0 50
@@ -930,14 +930,13 @@ swirl 0 -100|{set:e|G-Major 1 (LETOT)}
 hueshifthsv 0 180
 haah 0
 swirl 0 100
-multipitch 0 12,24,-3,-1,7
-|{set:e|L-Major 3}
+multipitch 0 12,24,-3,-1,7|{set:e|L-Major 3}
 swaprgba 0 r00
 huecurvergba 0 red 0.27 1
 foreachframe 0 0 fc "vegaswave 0x 0 0.75 (idx/fc)*(1-idx/fc)*0.2 idx/fc*6.2832 0 0 0 0"
 multipitch 0 -1,0,1|{set:e|Percy}
 hueshifthsv 0 180
-multipitch 0 5| {set:e|G-Major 58 (Old)}
+multipitch 0 5|{set:e|G-Major 58 (Old)}
 create bg w h 0 255 0 255
 overlay bg 0 0 0 #240377 0.005 0.05
 overlay 0 bg
