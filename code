@@ -706,7 +706,7 @@ rotate 0 -2 none true
 sharpen 0
 multipitch 0 0,-0.2|{set:e|Super Custom Major 3}
 hueshifthsv 0 0.525*360
-tvsimulator 0.5 4
+tvsimulator 0 0.5 4
 haah 0
 multipitch 0 0,0.1,0.2,0.3|{set:e|Shock}
 invert 0
