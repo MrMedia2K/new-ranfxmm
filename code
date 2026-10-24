@@ -630,7 +630,7 @@ vegaswave 0 0 5.4 0.05 0 0 5.4 0.05 0
 multipitch 0 -12
 audiovibrato 0 20 0.5|{set:e|V-Major}
 invert 0
-hueshifthsv 0
+hueshifthsv 0 180
 waaw 0
 multipitch 0 -9,3,9|{set:e|W-Major}
 invert 0
