@@ -851,7 +851,7 @@ flop 0
 multipitch 0 -4.5,-10.5|{set:e|Grayscale Fisheye}
 gray 0
 pinchpunch 0 1 0.5 0.5 0.5 0.5
-multipitch 0 -9,3|{set:e|{set:e|G-Minor 305}
+multipitch 0 -9,3|{set:e|G-Minor 305}
 hueshifthsv 0 -120
 multipitch 0 7,-12|{set:e|E-Minor 16}
 gradientmap 0 blue yellow black
