@@ -783,4 +783,4 @@ get 0 duration d
 get 0 framecount fc
 {get:fx}
 convert 0 video/mp4
-render 0}|But something went wrong. It's most likely a timeout or bad syntax.}
+render 0}|{newline}But something went wrong. It's most likely a timeout or bad syntax.}
