@@ -539,7 +539,7 @@ multipitch 0 1|{set:e|LTKC Map}
 gradientmap 0 red yellow black
 multipitch 0 1|{set:e|Cold Major}
 gray 0
-ffmpeg 0 -vf curves=r=0/0 0.3333333333333333/0 0.6666666666666666/0 1/0:g=0/0.0196078431372549 0.3333333333333333/0.19607843137254902 0.6666666666666666/0.0196078431372549 1/0.0392156862745098:b=0/0.3176470588235294 0.3333333333333333/0.3333333333333333 0.6666666666666666/0.26666666666666666 1/0.8274509803921568
+ffmpeg 0 -vf "curves=r=0/0 0.3333333333333333/0 0.6666666666666666/0 1/0:g=0/0.0196078431372549 0.3333333333333333/0.19607843137254902 0.6666666666666666/0.0196078431372549 1/0.0392156862745098:b=0/0.3176470588235294 0.3333333333333333/0.3333333333333333 0.6666666666666666/0.26666666666666666 1/0.8274509803921568"
 multipitch 0 -2|{set:e|Ares 6.0}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563277333274562792/convert.dc9b29f4.mp3 car
 gradientmap 0 rgb(239,222,205) rgb(254,200,50) (254,0,200) rgb(255,182,193) black
@@ -775,7 +775,7 @@ hueshifthsv 0 120
 flop 0
 vegaswave 0 -18.85 10 0.01 0 18.85 10 0.01 0
 multipitch 0 0,-5
-}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}
+}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
 get 0 height h
