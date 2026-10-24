@@ -59,7 +59,7 @@ blend 0 1 multiply
 blend 0 2 multiply
 multipitch 0 -24|{set:e|Crazy Diamond}
 tvsimulator 0 0.75
-greasientmap 0 blue red #00ff00 white
+gradientmap 0 blue red #00ff00 white
 zoomblur 0 1.15
 brightness 0 5
 contrastmultiply 0 2
