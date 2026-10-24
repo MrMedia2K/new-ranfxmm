@@ -79,24 +79,25 @@ hueshifthsv 0 0.272*360
 invert 0
 vegaswave 0 0 0 0 0 0 23.04 0.027 2.168
 multipitch 0 -6,-3|{set:e|Group (2012)}
-load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 gp
+load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 car
 vocode 0 gp
 pinchpunch 0 1 0.24 0.409
 loadcube https://cdn.discordapp.com/attachments/1502102376440529048/1562413783564030012/infrared.cube inf
 applylut 0 inf|{set:e|Clearer}
 gradientmap 0 #ff1e1e #0f31ff #00d40c #ff4bda #2dffff #ffff00 #000000 #9a0072 #ffffff
-load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 cl
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
 vocode 0 cl|{set:e|Helium}
 gradientmap 0 #00ff00 #00ffff #0000ff
-load https://cdn.discordapp.com/attachments/1519305734230245416/1531617856159219753/C4_saw.wav he
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563395613482033183/convert.a9fcb2f6.mp3 car
+multipitch 0 6
 vocode 0 he|{set:e|4ormulator V1}
 gradientmap 0 black #f00000 #ffa300 #11f000 #000000 #ffffff
 tvsimulator 0 0.964
-load https://cdn.discordapp.com/attachments/1124759616283222146/1493397857875660862/convert.432f828a.mp3 4v1
+load https://cdn.discordapp.com/attachments/1124759616283222146/1493397857875660862/convert.432f828a.mp3 car
 multipitch 0 -5
 vocode 0 4v1|{set:e|Full Chord}
 gradientmap 0 white #8000ff #54ff9f #00ffff white
-load https://cdn.discordapp.com/attachments/1502102376440529048/1562646006535950346/convert.6cb45893.mp3 fc
+load https://cdn.discordapp.com/attachments/1502102376440529048/1562646006535950346/convert.6cb45893.mp3 car
 vocode 0 fc|{set:e|Pitch White}
 gradientmap 0 white rgba(255,255,255,0),0.5
 multipitch 0 24|{set:e|LOL}
@@ -243,12 +244,15 @@ invert 0
 swirl 0
 multipitch 0 -6|{set:e|Dais Group}
 hueshifthsv 0 -140
-multipitch 0 -5|{set:e|Leaf Fall Down Major} hueshifthsv 0 -60
+multipitch 0 -5|{set:e|Leaf Fall Down Major} 
+hueshifthsv 0 -60
 flop 0
-multipitch 0 -3|{set:e|Not Scary} hueshifthsv 0 180
+multipitch 0 -3|{set:e|Not Scary} 
+hueshifthsv 0 180
 waaw 0
 tvsimulator 0 0.75
-multipitch 0 -2|{set:e|Diamond Major} hueshifthsv 0 21.6
+multipitch 0 -2|{set:e|Diamond Major} 
+hueshifthsv 0 21.6
 flop 0
 multipitch 0 2|{set:e|Boul123 Major}
 hueshifthsv 120 30
@@ -347,7 +351,8 @@ hueshifthsv 0 180
 reverse 0
 multipitch 0 -36,-29,-24,-20,-17,-12|{set:e|IHTX Pinch}
 pinchpunch 0 -0.5
-multipitch 0 -2|{set:e|Rotation Wave} foreachframe 0 0 fc “rotate 0x -180*{get:idx}/fc none true”
+multipitch 0 -2|{set:e|Rotation Wave}
+foreachframe 0 0 fc “rotate 0x -180*{get:idx}/fc none true”
 vegaswave 0 0 2 0.1 0 0 0 0 0
 multipitch 0 -4|{set:e|Crazy Slow Killed{if:{get:h}|=|0|then: (No Speed)}}
 hueshifthsv 0 60
@@ -529,7 +534,7 @@ foreachframe 0 0 fc "vegaswave 0x 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc 0 32*
 ffmpeg 0 -af vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1,vibrato=1:1 -c:v ffv1 -c:a pcm_s16le -preset ultrafast|{set:e|X Is Partying}
 hueshifthsv 0 180
 gradientmap 0 rgba(0,0,0,0),0.5 black,1
-foreachframe 0 0 fc “vegaswave 0x 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc”
+foreachframe 0 0 fc "vegaswave 0x 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc 0 32*idx/fc 0.5*idx/fc 3.141592*2*idx/fc"
 multipitch 0 1|{set:e|LTKC Map}
 gradientmap 0 red yellow black
 multipitch 0 1|{set:e|Cold Major}
@@ -761,8 +766,16 @@ audioreverb 0 1 40 0.5
 audioreverb 0 1 50 0.5
 audioreverb 0 1 60 0.5
 audioreverb 0 1 70 0.5
-audiodestroy 0
-}}{set:fx|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}
+audiodestroy 0|{set:e|Wiggle Major}
+hueshifthsv 0 -60
+foreachframe 0 0 fc "vegaswave 0x 0 1 0.15*idx/fc idx*30/(fc/d) 0 1 0.15*idx/fc idx*30/(fc/d)"
+multipitch 0 -2,0,12|{set:e|G-Major 51}
+invert 0
+hueshifthsv 0 120
+flop 0
+vegaswave 0 -18.85 10 0.01 0 18.85 10 0.01 0
+multipitch 0 0,-5
+}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
 get 0 height h
