@@ -1,6 +1,6 @@
 yet another ranfx+ remake.
-{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom}{set:h|{range:0|1}}{set:m|}{set:o|1}
-{set:e|Fallback Effect}{set:fx|{choose:{set:e|G-Major 4}
+{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrigen monoxide|damn is 😂🎉|if you see “the creator of ranfx is problematic”, they’re taking about yasinreturns not me (mr.media2k)}{set:h|{range:0|1}}{set:m|}{set:o|1}
+{set:e|Fallback}{set:fx|{choose:{set:e|G-Major 4}
 gradientmap 0 rgba(0,0,0,0),0.5 black
 multipitch 0 0,5|{set:e|CoNfUsIoN}
 invert 0
@@ -81,25 +81,25 @@ invert 0
 vegaswave 0 0 0 0 0 0 23.04 0.027 2.168
 multipitch 0 -6,-3|{set:e|Group (2012)}
 load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 car
-vocode 0 gp
+vocode 0 car
 pinchpunch 0 1 0.24 0.409
 loadcube https://cdn.discordapp.com/attachments/1502102376440529048/1562413783564030012/infrared.cube inf
 applylut 0 inf|{set:e|Clearer}
 gradientmap 0 #ff1e1e #0f31ff #00d40c #ff4bda #2dffff #ffff00 #000000 #9a0072 #ffffff
 load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
-vocode 0 cl|{set:e|Helium}
+vocode 0 car|{set:e|Helium}
 gradientmap 0 #00ff00 #00ffff #0000ff
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563395613482033183/convert.a9fcb2f6.mp3 car
 multipitch 0 6
-vocode 0 he|{set:e|4ormulator V1}
+vocode 0 car|{set:e|4ormulator V1}
 gradientmap 0 black #f00000 #ffa300 #11f000 #000000 #ffffff
 tvsimulator 0 0.964
 load https://cdn.discordapp.com/attachments/1124759616283222146/1493397857875660862/convert.432f828a.mp3 car
 multipitch 0 -5
-vocode 0 4v1|{set:e|Full Chord}
+vocode 0 car|{set:e|Full Chord}
 gradientmap 0 white #8000ff #54ff9f #00ffff white
 load https://cdn.discordapp.com/attachments/1502102376440529048/1562646006535950346/convert.6cb45893.mp3 car
-vocode 0 fc|{set:e|Pitch White}
+vocode 0 car|{set:e|Pitch White}
 gradientmap 0 white rgba(255,255,255,0),0.5
 multipitch 0 24|{set:e|LOL}
 gradientmap 0 blue rgba(0,0,0,0) red
@@ -245,14 +245,12 @@ invert 0
 swirl 0
 multipitch 0 -6|{set:e|Dais Group}
 hueshifthsv 0 -140
-multipitch 0 -5|{set:e|Leaf Fall Down Major} 
-hueshifthsv 0 -60
+multipitch 0 -5|{set:e|Leaf Fall Down Major} hueshifthsv 0 -60
 flop 0
-multipitch 0 -3|{set:e|Not Scary} 
-hueshifthsv 0 180
+multipitch 0 -3|{set:e|Not Scary} hueshifthsv 0 180
 waaw 0
 tvsimulator 0 0.75
-multipitch 0 -2|{set:e|Diamond Major} 
+multipitch 0 -2|{set:e|Diamond Major}
 hueshifthsv 0 21.6
 flop 0
 multipitch 0 2|{set:e|Boul123 Major}
@@ -353,7 +351,7 @@ reverse 0
 multipitch 0 -36,-29,-24,-20,-17,-12|{set:e|IHTX Pinch}
 pinchpunch 0 -0.5
 multipitch 0 -2|{set:e|Rotation Wave}
-foreachframe 0 0 fc “rotate 0x -180*{get:idx}/fc none true”
+foreachframe 0 0 fc "rotate 0x -180*idx/fc none true"
 vegaswave 0 0 2 0.1 0 0 0 0 0
 multipitch 0 -4|{set:e|Crazy Slow Killed{if:{get:h}|=|0|then: (No Speed)}}
 hueshifthsv 0 60
@@ -367,7 +365,7 @@ wiggle 0 right 30 4
 tunnel 0
 multipitch 0 -6|{set:e|Mirror Twirl}
 haah 0
-foreachframe 0 0 fc “swirl 0 -120*(({get:idx}/fc)-1)”
+foreachframe 0 0 fc "swirl 0 -120*((idx/fc)-1)"
 copy 0 1
 vocode 0 1
 multipitch 0 -8|{set:e|Goodbye Effect}
@@ -396,7 +394,7 @@ haah 0
 multipitch 0 1|{set:e|Yellow TV}
 swaprgba 0 bgr
 hueshifthsv 0 60
-ffmpeg 0 -vf format=yuv444p,geq=’p(mod(X*4,W),mod(Y*4,H))’,format=yuv420p
+ffmpeg 0 -vf format=yuv444p,geq='p(mod(X*4,W),mod(Y*4,H))',format=yuv420p
 multipitch 0 -8,8|{set:e|G-Major 100}
 swaprgba 0 bgr
 hueshiftccs 0 100
@@ -431,7 +429,7 @@ speed 0 0.25|{set:e|G-Major Mirror Top}
 speed 0 2
 invert 0
 haah 0
-woow 0|{set:e|ranfxmm Special}
+woow 0|{set:e|RanFXMM Special}
 tvsimulator 0 0.75
 swaprgba 0 rbg
 hueshifthsv 0 10
@@ -506,10 +504,14 @@ hueshifthsv 0 0.168*360
 haah 0
 vegaswave 0 0 10 0.03 0.8 0 10 0.03 0.8
 multipitch 0 14|{set:e|Mystery Effect}
-load https://cdn.discordapp.com/attachments/1502102376440529048/1563275135908319352/convert.00a522b1.mp3 car
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563431283038617760/convert.00a522b1.mp3 car
 hueshiftccs 0 180
 flop 0
-vocode 0 car|{set:e|Talking Of Flutes}
+copy 0 1
+speed 1 1.05
+snip 1 0 d
+audioputreplace 0 1
+vocode 0 car |{set:e|Talking Of Flutes}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563275349079629885/convert.04799698.mp3 car
 gradientmap 0 pink #00ff00 cyan white
 vocode 0 car|{set:e|Videoup V0}
@@ -671,15 +673,25 @@ hueshifthsv 0 0 -65 -33
 copy 0 1
 flop 0
 overlay 0 1 0 0 #ffffff 0.1 0.1 90
-multipitch 0 -12,-7,0,5,12,17|{set:e|Mirror And Other}
-copy 0 1
-volume 1 0
+multipitch 0 -12,-7,0,5,12,17|{set:e|Mirror and Other}
 flop 1
-overlay 0 1 0 0 #000000 0 0 50
-multipitch 0 -8,-7|{set:e|Vicious G-Major}
+volume 1 0
+overlay 0 1 0 0 #000000 0 0 false 50
+multipitch 0 -8,-7|{set:e|Mirror and Other 2.0}
+flop 0
+rotate 1 90
+resize 1 w h
+rotate 2 90
+resize 2 w h
+flop 2
+volume 2 0
+volume 1 0
+overlay 1 2 0 0 #000000 0 0 false 50
+overlay 0 1 0 0 #000000 0 0 false 30
+multipitch 0 -1,2|{set:e|Vicious G-Major}
 tvsimulator 0 0.75
 cover 0 w h/2
-hueshift 0 180
+hueshifthsv 0 180
 invert 0
 multipitch 0 -3.86,-8.14
 resize 0 w h|{set:e|G-Major 200}
@@ -691,8 +703,8 @@ hueshifthsv 0 0.6*360
 vegaswave 0 0 0 0 0 0 3.8 0.1 0
 multipitch 0 -3.5|{set:e|Painis Major}
 hueshifthsv 0 -120
-pinchpunch 0 -1 0.4215 0.4445 0.511 0.511
-pinchpunch 0 -1 0.665 0.4545 0.435 0.435
+pinchpunch 0 -1 0.349 0.429 0.348 0.348
+pinchpunch 0 -1 0.637 0.429 0.449 0.348 0.348
 multipitch 0 -1.5|{set:e|Cry}
 invert 0
 hueshifthsv 0 60
@@ -775,7 +787,180 @@ invert 0
 hueshifthsv 0 120
 flop 0
 vegaswave 0 -18.85 10 0.01 0 18.85 10 0.01 0
-multipitch 0 0,-5
+multipitch 0 0,-5|{set:e|X1F7}
+flop 0
+gradientmap 0 white red #00ff00 blue rgba(0,0,0,0)
+tvsimulator 0 0.75
+foreachframe 0 0 fc "vegaswave 0x 0 0 0 0 0 4.19 0.027 0.8+idx/fc*3.873"
+audiodestroy 0
+multipitch 0 -4|{set:e|X Wants To Scare You}
+foreachframe 0 0 fc "rotate 0x -((1080*idx/fc)%360) none true"
+foreachframe 0 0 fc "crop 0x (w-1)*(1-idx/fc)+23 (h-1)*(1-idx/fc)+13 w*idx/fc/2 h*idx/fc/2"
+gradientmap 0 red yellow #00ff00 cyan blue #ff00ff red
+audiodestroy 0
+multipitch 0 -4|{set:e|Superior Light Rays}
+rotate 0 -10 none true
+zoom 0 1.125
+gradientmap 0 rgb(128,64,0) rgb(255,128,0) rgb(128,64,0)
+zoomblur 0 1.1
+multipitch 0 -4,-5|{set:e|Simulator V19}
+hueshifthsv 0 -60
+invert 0
+vegaswave 0 0 4 0.05 0 0 4 0.05 0
+vegaswave 0 0 4 0.05 0 0 4 0.05 0
+multipitch 0 -12,0,7|{set:e|Nike Chorded}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563624044979294228/Untitled731_20261024144336.png ov
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563620815155757106/convert.d2369ac1.mp3 car
+gradientmap 0 white black{if:{get:h}|=|1|then: #404040}
+audiopitch 0 2**(-1/2)
+fit ov w h
+flip 0
+flip ov
+overlay 0 ov
+flip 0
+vocode 0 car|{set:e|Deforming X}
+multipitch 0 -12
+ffmpeg 0 -af afreqshift=500
+rotate 0 90
+tvsimulator 0 0.8
+rotate 0 -90
+tvsimulator 0 0.9
+hueshiftccs 0 180
+hueshifthsv 0 -120|{set:e|Part Metallic}
+ffmpeg 0 -af haas
+huecurvergba 0 all 0 0.75 0.5
+gradientmap 0 black rgba(0,0,0,0) rgba(255,255,255,128)|{set:e|Medium Yelling}
+ffmpeg 0 -af mcompand
+tvsimulator 0 0.75
+pinchpunch 0 1
+flop 0
+tvsimulator 0 0.75
+hueshifthsv 0 180
+pinchpunch 0 -0.5|{set:e|Almost Blowing Wind}
+ffmpeg 0 -af aeval=mod(val(ch)+1\,1.25):c=same
+rotate 0 -30 none true
+tvsimulator 0 0.75
+rotate 0 30 none true
+flop 0|{set:e|Temu Wiggle Major}
+foreachframe 0 0 fc "vegaswave 0x 0 32 sin(idx/5)*idx/fc/5 0 0 32 sin(idx/5)*idx/fc/5 0"
+hueshifthsv 0 180
+multipitch 0 12|{set:e|G-Major 16 2.0}
+hueshifthsv 0 180
+invert 0
+flop 0
+multipitch 0 -4.5,-10.5|{set:e|Grayscale Fisheye}
+gray 0
+pinchpunch 0 1 0.5 0.5 0.5 0.5
+multipitch 0 -9,3|{set:e|{set:e|G-Minor 305}
+hueshifthsv 0 -120
+multipitch 0 7,-12|{set:e|E-Minor 16}
+gradientmap 0 blue yellow black
+multipitch 0 -7,12|{set:e|E-Major 16}
+gradientmap 0 yellow blue black
+multipitch 0 7,-12|{set:e|Braxton’s G-Major 191}
+hueshifthsv 0 62
+haah 0
+pinchpunch 0 1
+gradientmap 0 white,0 rgba(255,255,255,0),0.5
+multipitch 0 -7,12|{set:e|Custom Major 305}
+invert 0
+rotate 0 -2 none true
+multipitch 0 -7,12|{set:e|CCTVE2K11’s G-Major 84}
+swaprgba 0 rbg
+pinchpunch 0 1
+multipitch 0 -7,12|{set:e|Too Ruins Tree}
+swaprgba 0 rbg
+pinchpunch 0 1
+multipitch 0 16|{set:e|BlockDashKing’s G-Major 12}
+invert 0
+multipitch 0 -7,12|{set:e|DGF’s G-Major 5}
+flip 0
+gradientmap 0 white rgb(255,0,200) black
+multipitch 0 -7,12|{set:e|Katie’s G-Major 17}
+hueshifthsv 0 180
+flop 0
+pinchpunch 0 0.0333
+multipitch 0 -7,12|{set:e|GM4TOT’s G-Major 13}
+hueshiftccs 0 180
+multipitch 0 -7,12|{set:e|STTTLE6121’s G-Major 113}
+hueshifthsv 0 -100
+pinchpunch 0 1
+multipitch 0 -7,12|{set:e|TKCF2012’s G-Major 149}
+hueshifthsv 0 60
+flop 0
+swirl 0 60
+multipitch 0 -7,12|{set:e|TAITOT525’s G-Major 5}
+gradientmap 0 yellow black cyan
+multipitch 0 -7,12| {set:e|G-Major 262 (freakzinga)}
+hueshifthsv 0 180
+pinchpunch 0 1
+motionblur 0 50
+multipitch 0 -23,2|{set:e|Q-Major 34}
+foreachframe 0 0 fc/2 "huecurvergba 0x all abs(1-(idx/fc*2)) 1"
+foreachframe 0 fc/2 fc "huecurvergba 0x all 0 1-abs(1-(idx/fc*2))"
+swaprgba 0 rgb
+huecurvergba 0 all 0.495,0 0.505,1
+multipitch 0 0.5
+volume 0 5|{set:e|Illiterate}
+invert 0
+hueshifthsv 0 120
+vegaswave 0 0 0 0 0 0 13.54 0.04 0
+multipitch 0 -10,0|{set:e|5-DXI}
+shake 0 0 5 1
+swirl 0 50
+pinchpunch 0 0.5
+hueshifthsv 0 32
+invertrgba 0 0 0 1
+hueshifthsv 0 100
+multipitch 0 -4.5,5|{set:e|G-Major 12.16}
+gradientmap 0 #8000ff yellow
+haah 0
+vegaswave 0 12.57 2 0.04 0 12.57 2 0.04 0
+multipitch 0 12,16|{set:e|un3u3}
+hueshifthsv 0 180
+multipitch 0 4|{set:e|un3n3}
+hueshiftccs 0 180
+multipitch 0 4|{set:e|Weird Code}
+multipitch 0 -4
+{foreach:5|audiovibrato 0 10 1
+{newline}}
+waaw 0
+hueshifthsv 0 180
+swirl 0 -100|{set:e|G-Major 1 (LETOT)}
+hueshifthsv 0 180
+haah 0
+swirl 0 100
+multipitch 0 12,24,-3,-1,7
+|{set:e|L-Major 3}
+swaprgba 0 r00
+huecurvergba 0 red 0.27 1
+foreachframe 0 0 fc "vegaswave 0x 0 0.75 (idx/fc)*(1-idx/fc)*0.2 idx/fc*6.2832 0 0 0 0"
+multipitch 0 -1,0,1|{set:e|Percy}
+hueshifthsv 0 180
+multipitch 0 5| {set:e|G-Major 58 (Old)}
+create bg w h 0 255 0 255
+overlay bg 0 0 0 #240377 0.005 0.05
+overlay 0 bg
+create bg2 w h 0 255 0 255
+overlay bg2 0 0 0 #60538e 0.005 0.05
+overlay 0 bg2
+pinchpunch 0 1
+multipitch 0 12,-1,-12,-24|{set:e|Ugly Major}
+hueshifthsv 0 180
+invert 0
+pinchpunch 0 1
+multipitch 0 -8,4,12,4,-5|{set:e|G-Simplified Major 1}
+invert 0
+hueshifthsv 88.2
+tvsimulator 0 0.95 4
+multipitch 0 0,-12,-7,-4,5,8,12|{set:e|Fruit Punch Major}
+gradientmap 0 rgb(105,27,0) rgb(210,18,0) rgb(240,140,0) rgb(225,200,0) rgb(0,208,255)
+multipitch 0 2,6,-10,-6|{set:e|G-Major 8 (LETOT)}
+swaprgba 0 bgr
+multipitch 0 -8,16|{set:e|Poplar Forest Major}
+gradientmap 0 rgb(255,155,0) rgb(255,126,85) red
+multipitch 0 -5.75,5.75|{set:e|G-Major 545}
+vegaswave 0 0 10.9 0.054 0 0 5.49 0.054 0
 }}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
