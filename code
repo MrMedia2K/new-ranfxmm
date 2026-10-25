@@ -197,8 +197,10 @@ pinchpunch 0 -1 0.348 0.389 0.5 0.5
 haah 0
 multipitch 0 -3,-5|{set:e|Does Respond}
 hueshifthsv 0 -60
-ffmpeg 0 -vf format=yuv444p16le,scale=h:h,geq='p(W*0.527+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*cos((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326,H*0.348+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*sin((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326)',scale=w:h,setsar=1:1,format=yuv420p
-multipitch 0 0,-12|{set:e|G-Major 16}
+resize 0 h h
+ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.527+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*cos((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326,H*0.348+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*sin((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326)',format=yuv420p
+multipitch 0 0,-12
+resize 0 w h|{set:e|G-Major 16}
 flop 0
 invert 0
 hueshifthsv 0 -120
@@ -212,11 +214,15 @@ hueshiftccs 0 26.939 3
 multipitch 0 -7,0,7|{set:e|G-Major 7}
 invert 0
 multipitch 0 0,3|{set:e|Does Not Respond}
-hueshifthsv 0 -60
-ffmpeg 0 -vf format=yuv444p16le,scale=h:h,geq='p(W*0.527+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*cos((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((-0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326,H*0.348+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*sin((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((-0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326)',scale=w:h,setsar=1:1,format=yuv420p
-multipitch 0 0,12|{set:e|Loud Ear Bleep}
+hueshifthsv 0 60
+resize 0 h h
+ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.527+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*cos((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((-0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326,H*0.348+(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))*sin((atan2((Y-H*0.348)*0.326,(X-W*0.527)*0.326))+((-0.109)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326),min(W,H)),1-(hypot((X-W*0.527)/0.326,(Y-H*0.348)/0.326))/(min(W,H)),0)^2))*0.326)',format=yuv420p
+multipitch 0 0,12
+resize 0 w h|{set:e|Loud Ear Bleep}
 hueshifthsv 0 180
-ffmpeg 0 -vf format=yuv444p16le,scale=h:h,geq='p(W*0.5+(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))*cos((atan2((Y-H*0.5)*0.25,(X-W*0.5)*0.25))+((0.5)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25),min(W,H)),1-(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))/(min(W,H)),0)^2))*0.25,H*0.5+(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))*sin((atan2((Y-H*0.5)*0.25,(X-W*0.5)*0.25))+((0.5)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25),min(W,H)),1-(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))/(min(W,H)),0)^2))*0.25)',scale=w:h,setsar=1:1,format=yuv420p
+resize 0 h h
+ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.5+(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))*cos((atan2((Y-H*0.5)*0.25,(X-W*0.5)*0.25))+((0.5)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25),min(W,H)),1-(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))/(min(W,H)),0)^2))*0.25,H*0.5+(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))*sin((atan2((Y-H*0.5)*0.25,(X-W*0.5)*0.25))+((0.5)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25),min(W,H)),1-(hypot((X-W*0.5)/0.25,(Y-H*0.5)/0.25))/(min(W,H)),0)^2))*0.25)',setsar=1:1,format=yuv420p
+resize 0 w h
 audiodestroy 0
 multipitch 0 16|{set:e|Are You Sure X Is In G-Major?}
 hueshifthsv 0 -60
@@ -294,7 +300,7 @@ tvsimulator 0 0.5
 multipitch 0 0,-6|{set:e|G-Major 6}
 huecurvergba 0 0,0.595 1,0.605
 multipitch 0 -8,0|{set:e|G-Major 8}
-huecurvergba 0 0,0.245 1,0.255
+huecurvergba 0 all 0,0.245 1,0.255
 hueshifthsv 0 180
 invert 0
 multipitch 0 -7,0|{set:e|G-Major 9}
@@ -443,8 +449,12 @@ vocode 0 0|{set:e|Black And White Chorded}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1562993603238690896/convert.5cb4f529.mp3 bnw
 vocode 0 bnw
 gradientmap 0 black white black white|{set:e|Wat X (PositiveNull99)}
-foreachframe 0 0 fc "cover 0 w/((({get:idx}/fc)**2)+1) h"
-foreachframe 0 0 fc "gradientmap 0 rgba(0,0,0,255*{get:idx}/fc) rgba(255,255,255,255*{get:idx}/fc) rgba(0,0,0,255*{get:idx}/fc)"|{set:e|Clearer 2}
+foreachframe 0 0 fc "cover 0x w/(((idx/fc)**2)+1) h"
+copy 0 1
+gradientmap 1 black white black
+fadein 1 d
+fadeout 0 d
+blend 0 1 add|{set:e|Clearer 2}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1562995216967925801/convert.21fa4ec8.mp3 ct
 gradientmap 0 #2fff00 #00ffff #ffff00 #ffffff #ff0000 #ff80f6 #000000 #64e132 #ffffff
 vocode 0 ct|{set:e|Group}
@@ -799,7 +809,7 @@ foreachframe 0 0 fc "crop 0x (w-1)*(1-idx/fc)+23 (h-1)*(1-idx/fc)+13 w*idx/fc/2 
 gradientmap 0 red yellow #00ff00 cyan blue #ff00ff red
 audiodestroy 0
 multipitch 0 -4|{set:e|Superior Light Rays}
-rotate 0 -10 none true
+rotate 0 10 none true
 zoom 0 1.125
 gradientmap 0 rgb(128,64,0) rgb(255,128,0) rgb(128,64,0)
 zoomblur 0 1.1
@@ -959,8 +969,60 @@ swaprgba 0 bgr
 multipitch 0 -8,16|{set:e|Poplar Forest Major}
 gradientmap 0 rgb(255,155,0) rgb(255,126,85) red
 multipitch 0 -5.75,5.75|{set:e|G-Major 545}
-vegaswave 0 0 10.9 0.054 0 0 5.49 0.054 0
-}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3 d+3|{replace:.mp3 car|.mp3 car{newline}snip car 0.3 d+3|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
+vegaswave 0 0 10.9 0.054 0 0 5.49 0.054 0|{set:e|Stancuic Major 6}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563716345592414228/IMG_2761.webp ov
+rotate 0 33.158
+waaw 0
+rotate 0 -33.158 none true
+get 0 width w2
+get 0 height h2
+crop 0 w h (w2-w)/2 (h2-h)/2
+resize ov w h
+blend 0 ov difference
+multipitch 0 -5,7|{set:e|Evil Chorded}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563982237370679387/convert.bea71e42.mp3 car
+gradientmap 0 white rgb(0,0,125) rgb(0,167,255)
+vocode 0 car|{set:e|Electronic Sounds}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563983075350945843/convert.b3931edc.mp3 car
+gradientmap 0 white blue white
+vocode 0 car|{set:e|Electronic Sounds 2.0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563983075350945843/convert.b3931edc.mp3 car
+gradientmap 0 rgb(0,19,50) cyan #00ff00
+vocode 0 car
+multipitch 0 0,3|{set:e|Electronic Sounds 3.0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563983075350945843/convert.b3931edc.mp3 car
+gradientmap 0 rgb(55,0,25) rgb(250,90,239) rgb(50,0,255)
+vocode 0 car
+multipitch 0 -6,-1|{set:e|Robot}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563984568024047716/convert.ea641514.mp3 car
+gradientmap 0 red,0 cyan,0.4 blue,0.7 black,1
+vocode 0 car 20|{set:e|Ives}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563985711055503460/convert.32e7c4aa.mp3 car
+gradientmap 0 green black rgb(90,100,0)
+vocode 0 car|{set:e|Ives 2.0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1563985711055503460/convert.32e7c4aa.mp3 car
+gradientmap 0 rgb(30,15,255) black rgb(0,100,100)
+vocode 0 car
+multipitch 0 -2,0|{set:e|School Effect}
+swaprgba 0 grb
+pinchpunch 0 1
+multipitch 0 -5|{set:e|Fat Major}
+swaprgba 0 bgr
+pinchpunch 0 1
+flop 0
+hueshifthsv 0 180
+multipitch 0 6|{set:e|G-Major 27}
+flop 0
+swaprgba 0 bgr
+hueshifthsv 0 180
+multipitch 0 -6|{set:e|G-Major 275}
+hueshifthsv 0 180
+resize 0 h h
+ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.5+(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))*cos((atan2((Y-H*0.5)*0.707107,(X-W*0.5)*0.707107))+((-0.3)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107),min(W,H)),1-(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))/(min(W,H)),0)))*0.707107,H*0.5+(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))*sin((atan2((Y-H*0.5)*0.707107,(X-W*0.5)*0.707107))+((-0.3)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107),min(W,H)),1-(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))/(min(W,H)),0)))*0.707107)',setsar=1:1,format=yuv420p
+resize 0 w h
+woow 0
+multipitch 0 2
+}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
 get 0 width w
 get 0 height h
@@ -968,4 +1030,6 @@ get 0 duration d
 get 0 framecount fc
 {get:fx}
 convert 0 video/mp4
-render 0}|{newline}But something went wrong. It's most likely a timeout or bad syntax.}
+render 0}|{newline}But something went wrong. It's most likely a timeout or bad syntax.
+Try inputting this to see if it will work:
+-# `.t itest+ {get:fx}`}
