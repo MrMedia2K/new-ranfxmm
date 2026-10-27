@@ -568,7 +568,7 @@ audioputreplace 0 sfx|{set:e|Phased 4.0}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563277758740697158/convert.83edb291.mp3 car
 gradientmap 0 black rgb(28,255,0) white rgb(7,255,217)
 vocode 0 car|{set:e|Videoup V2.1}
-load https://cdn.discordapp.com/attachments/1502102376440529048/1563277893419794432/convert.d4fca36b.mp3 car
+load https://cdn.discordapp.com/attachments/1516287797823148052/1564435169476345876/convert.d4fca36b.mp3 car
 gradientmap 0 rgb(160,18,139) rgb(0,255,176) rgb(0,0,127)
 tvsimulator 0 0.95 4
 vocode 0 car|{set:e|Hungarain Power}
