@@ -572,7 +572,7 @@ load https://cdn.discordapp.com/attachments/1502102376440529048/1563277893419794
 gradientmap 0 rgb(160,18,139) rgb(0,255,176) rgb(0,0,127)
 tvsimulator 0 0.95 4
 vocode 0 car|{set:e|Hungarain Power}
-load https://cdn.discordapp.com/attachments/1502102376440529048/1563278017206161570/convert.1f6a57b7.mp3 car
+load https://cdn.discordapp.com/attachments/1502102376440529048/1564020741798764544/convert.1f6a57b7.mp3 car
 gradientmap 0 red white green
 vocode 0 car|{set:e|Not Clearer}
 load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
@@ -1021,15 +1021,238 @@ resize 0 h h
 ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.5+(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))*cos((atan2((Y-H*0.5)*0.707107,(X-W*0.5)*0.707107))+((-0.3)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107),min(W,H)),1-(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))/(min(W,H)),0)))*0.707107,H*0.5+(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))*sin((atan2((Y-H*0.5)*0.707107,(X-W*0.5)*0.707107))+((-0.3)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107),min(W,H)),1-(hypot((X-W*0.5)/0.707107,(Y-H*0.5)/0.707107))/(min(W,H)),0)))*0.707107)',setsar=1:1,format=yuv420p
 resize 0 w h
 woow 0
-multipitch 0 2
+multipitch 0 2|{set:e|Cyprus’s Custom Major}
+hueshifthsv 0 -38
+waaw 0
+vegaswave 0 0 6 -0.02 0 0 6 -0.02 0
+tvsimulator 0 0.95
+multipitch 0 0,0.1|{set:e|Weird X (Mercator)}
+invert 0
+hueshifthsv 0 194.4
+copy 0 1
+scale 1 0.5
+overlay 0 1 w/4 w/4
+ffmpeg 0 -vf setpts=1/0.25*PTS -af rubberband=formant=712923000:tempo=0.25
+setfps 0 fps
+vegaswave 0 1 2 -0.03 0 1 2 -0.03 0
+multipitch 0 0,7|{set:e|Weird X (Lazy Butterfly)}
+copy 0 1
+resize 1 w/2 h/2
+invert 0
+hueshifthsv 0 180
+ffmpeg 0 -vf format=yuv444p,geq='p(W*0.5+(hypot(X-W*0.5,Y-H*0.5)+20*sin(2*PI*4*T-(0)+(-(hypot(X-W*0.5,Y-H*0.5))/30)))*cos(atan2(Y-H*0.5,X-W*0.5)),H*0.5+(hypot(X-W*0.5,Y-H*0.5)+20*sin(2*PI*4*T-(0)+(-(hypot(X-W*0.5,Y-H*0.5))/30)))*sin(atan2(Y-H*0.5,X-W*0.5)))',format=yuv420p
+volume 1 0
+overlay 0 1 w/4 h/4
+multipitch 0 0,16
+ffmpeg 0 -vf setpts=1/0.25*PTS -af rubberband=formant=712923000:tempo=0.25
+setfps 0 fc/d|{set:e|AALI}
+{set:m|for the logokids}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1535786007985786941/seesaw.0077c7cc.mp3 sfx
+vegaswave 0 -25.1327 10 0.02 0 0 0 0 0
+audioputreplace 0 sfx|{set:e|Kamryn Swift Major}
+hueshifthsv 0 50
+multipitch 0 7|{set:e|VVinie Major}
+gradientmap 0 white rgb(255,60,254) rgb(246,255,195)
+multipitch 0 -8,3,-4,1|{set:e|G-Major 5 (TheUser10)}
+copy 0 1
+crop 1 w/2 h
+waaw 0
+hueshiftccs 0 180
+tvsimulator 0 0.75
+volume 1 0
+overlay 0 1
+multipitch 0 0,-2|{set:e|G-Major 227}
+haah 0
+woow 0
+invert 0
+swaprgba 0 bgr
+hueshifthsv 0 0.778*360
+tvsimulator 0 0.75
+vegaswave 0 0 0 0 0 0 6.28 0.113 1.196
+multipitch 0 4,7|{set:e|TKCF Major 33}
+gradientmap 0 black blue
+ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H/3,H))',format=yuv420p
+tvsimulator 0 0.75
+multipitch 0 -1,0,5,8|{set:e|G-Major FIX! 2}
+hueshifthsv 0 180
+invert 0
+multipitch 0 -17,-10,-5,-1,2,7|{set:e|G-Major -68}
+contrastmultiply 0 3
+gradientmap 0 rgb(250,200,0) rgb(0,175,0)
+multipitch 0 1|{set:e|X Is Embosser}
+copy 0 1
+multipitch 1 5
+multipitch 0 12
+offset 1 w/200 h/200
+invert 1
+overlay 0 1 0 0 none 0.01 0 false 50|{set:e|G-Major 57 (Braxton Hudson)}
+huecurvergba 0 60
+swaprgba 0 bgr
+multipitch 0 -6,3|{set:e|Heavy Major}
+swaprgba 0 bgr
+pinchpunch 0 1
+pinchpunch 0 1
+haah 0
+multipitch 0 -12,-11,-9|{set:e|David Major}
+gradientmap 0 black,0.5 rgb(153,153,153),0.75 white,1
+multipitch 0 -1|{set:e|4ormulator V6}
+-f mp4 -preset ultrafast -qp 1 -tune fastdecode -c:v ffv1 -c:a pcm_s16le -threads 0 -movflags +faststart+frag_keyframe+empty_moov+default_base_moof a$i.mp4
+curl -sSL "https:""//file.garden/aRlNExn-C17HIWzw/4orm-VST" -o ./mp
+chmod +x mp
+ffmpeg -i a$i.mp4 -c:a pcm_s16le h$i.wav
+./mp h$i.wav out$i.wav -e 6
+ffmpeg -i a$i.mp4 -i out$i.wav -f mp4 -vf "split=3[a][b][t];[a]format=gray,curves=r=0/0 0.3333333333333333/1 0.6666666666666666/1 1/1:g=0/0 0.3333333333333333/0 0.6666666666666666/1 1/0:b=0/0 0.3333333333333333/1 0.6666666666666666/1 1/1[aa];[b]format=gray,curves=all=0/1 0.3333333333333333/1 0.6666666666666666/1 1/1[bb];[aa][bb]alphamerge[c];[t][c]overlay,format=yuv420p" -map 0:v -map 1:a -c:v ffv1 -c:a pcm_s16le -preset ultrafast -qp 1 -tune fastdecode -threads 0 -movflags +faststart+frag_keyframe+empty_moov+default_base_moof|{set:e|4ormulator V2}
+-vf movie=$(magick hald:6 -color-matrix '0 0 1 0 1 0 1 0 0' -colorspace lab -channel r -negate +channel -colorspace srgb -brightness-contrast -5x2.5 -modulate 100,100,240 il.ppm; echo il.ppm),[in]haldclut,hue=s=0,"curves=r=0/0.4588235294117647 0.2/0.615686274509804 0.4/0.48627450980392156 0.6/0.06666666666666667 0.8/0.47058823529411764 1/0.47058823529411764:g=0/0.027450980392156862 0.2/0.11372549019607843 0.4/0.13725490196078433 0.6/0.8549019607843137 0.8/0.6941176470588235 1/0.8588235294117647:b=0/0.24705882352941178 0.2/0.7843137254901961 0.4/0.5490196078431373 0.6/0.9921568627450981 0.8/0.24313725490196078 1/0.32941176470588235",format=yuv420p -c:v ffv1 -c:a pcm_s16le -preset ultrafast -qp 1 -tune fastdecode -threads 0 -movflags +faststart+frag_keyframe+empty_moov a$i.mov
+curl -sSL "https""://file.garden/aRlNExn-C17HIWzw/4orm-VST" -o ./mp
+chmod +x mp
+ffmpeg -i a$i.mov h$i.wav
+./mp h$i.wav out$i.wav -e 2 &\u003e/dev/null
+ffmpeg -i a$i.mov -i out$i.wav -map 0:v -map 1:a -c:v ffv1 -c:a pcm_s16le -preset ultrafast -qp 1 -tune fastdecode -threads 0 -movflags +faststart+frag_keyframe+empty_moov|{set:e|Talking Voices}
+-f mp4 a$i.$input_format
+curl -s -o ov "https""://file.garden/aTXso15ukD3mnuPI/orangevocoder"
+chmod +x ov
+ffmpeg -loglevel error -i "a$i.$input_format" -ac 1 -ar 48000 -t $d a$i.wav
+./ov --preset "TALKING VOICES" --mod a$i.wav --out b$i.wav &\u003e/dev/null
+ffmpeg -loglevel error -i a$i.$input_format -i b$i.wav -vf hue=s=0,"curves=r=0/1 0.333/0:g=0/1 0.333/1 0.667/0:b=0/1 0.333/0 0.667/0.1 1/0",format=yuv420p -map 0:v -map 1:a|{set:e|G-Major 21}
+hueshifthsv 0 0 100
+invert 0
+multipitch 0 0,-3,2,4|{set:e|G-Major 22 (Original)}
+gradientmap 0 black,0 rgb(117,117,147),0.25 rgb(95,98,71),0.3 rgb(87,87,0),0.5 black,0.75
+multipitch 0 0,10.3,20.3|{set:e|G-Major 22 (ow my ears version)}
+{set:m|the shake is innaccurate}
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
+shake 0 20 true 20
+zoom 0 1.3
+vocode 0 car
+multipitch 0 -2
+audiodestroy 0|{set:e|G-Major 23}
+hueshifthsv 0 -120
+flop 0
+multipitch 0 0,-3,3,0|{set:e|G-Major 24}
+create 1 w h 255 128 0 255
+blend 0 1 difference
+vegaswave 0 0 0 0 0 0 10 0.04 0.8
+multipitch 0 3,5,-2|{set:e|G-Major 25}
+hueshifthsv 0 -60
+multipitch 0 -1,-8|{set:e|G-Major 26}
+hueshifthsv 0 180 100
+huecurvergba 0 all 0.2 1
+multipitch 0 16|{set:e|G-Major 27}
+tvsimulator 0 0.5
+huecurvergba 0 all 0,0.355 1,0.365
+gray 0
+gradientmap 0 #00ff00,0.45 #ffff00,0.5
+multipitch 0 0,7,4,-12,4,-5,-8,3,2,6|{set:e|G-Major 29}
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+swaprgba 0 bgr
+hueshifthsv 0 0.62*360 100
+multipitch 0 9,7,5|{set:e|G-Major 30}
+invert 0
+hueshifthsv 0 0.275*360
+waaw 0
+swirl 0 -150
+vegaswave 0 -18.84 10 0.02 0 0 0 0 0
+multipitch 0 0,-2.25|{set:e|G-Major 31}
+hueshitfhsv 0 0.85*360
+invert 0
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+gray 0
+create 1 w h 159 165 0 255
+opacity 1 72*0.63
+overlay 0 1
+multipitch 0 6,2|{set:e|G-Major 32
+invert 0
+ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H*8,H))',format=yuv420p
+tvsimulator 0 0.45
+vegaswave 0 0 0 0 0 0 32 0.01 0
+swirl 0 110
+swirl 0 -4.5
+invert 0
+multipitch 0 0,-3,-6,-8|{set:e|G-Major 33}
+invert 0
+swaprgba 0 0g0
+huecurvergba 0 green 0.27 1
+gradientmap 0 pink,0 rgba(255,0,255,0),0.5
+ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H*1.2,H))',format=yuv420p
+tvsimulator 0 0.666
+multipitch 0 0,-7,4.5,8.67|{set:e|G-Major 34}
+{set:m|the audio is inaccurate!}
+hueshifthsv 0 270
+vegaswave 0 -18.84 10 0.02 0 0 0 0 0
+pinchpinch 0 1
+invert 0
+multipitch 0 0,-4,5
+volume 0 10|{set:e|G-Major 35}
+ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H*3.3,H))',format=yuv420p
+tvsimulator 0 0.254
+invert 0
+gradientmap 0 rgba(255,0,0,0),0.5 red,1
+gradientmap 0 blue,0 rgba(0,0,255,0),0.5
+multipitch 0 -10,-5,0,5|{set:e|G-Major 36}
+gradientmap 0 rgb(183,125,0),0 rgb(90,56,0),0.75 white,1
+tvsimulator 0 0.85
+multipitch 0 -8,-3,0,2,5|{set:e|G-Major 37}
+invert 0
+multipitch 0 11.5|{set:e|G-Major 38}
+gradientmap 0 yellow,0 rgba(255,255,0,0),0.5
+ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H/2,H))',format=yuv420p
+swirl 0 -150
+multipitch 0 0,2,4,6,9,12,16|{set:e|G-Major 39}
+gradientmap 0 white red black
+tvsimulator 0 0.75
+zoomblur 0 1.05
+multipitch 0 -12,-5,0,4,7,12
+multipitch 0 3,9|{set:e|G-Major 972 V2}
+ffmpeg 0 -vf format=yuv444p,geq='p(mod(X*9,W),mod(Y*9,H))',format=yuv420p
+pinchpunch 0 1
+pinchpunch 0 0.5
+haah 0
+hueshifthsv 0 180
+foreachframe 0 0 fc "hueshifthsv 0x idx/fc*360-180"
+multipitch 0 -10,-6,0
+audiovibrato 0 1 1|{set:e|Ahhhhh}
+foreachframe 0 0 fc "swirl 0x 360*sin(idx/4*3/(fc/d))"
+multipitch 0 -6|{set:e|Too Dark In Pitch}
+brightness 0 -20
+multipitch 0 -4|{set:e|Fast & Slow}
+copy 0 1
+ffmpeg 0 -vf setpts=PTS/2,format=yuv444p,geq='p(mod(X*2,W),mod(Y*2,H))'  -af rubberband=tempo=2:pitch=2
+swirl 1 -200
+ffmpeg 1 -vf setpts=PTS*2 -af rubberband=tempo=0.5:pitch=0.5
+concat 0 1|{set:e|Molly Major}
+{set:m|no image for now}
+huecurvergba 0 red 0.2 0.9
+huecurvergba 0 green 0 0.8
+huecurvergba 0 blue 0.2 0.9
+multipitch 0 1|{set:e|G-Major 65}
+ffmpeg 0 -vf setpts=PTS/1.435 -af rubberband=tempo=1.435
+multipitch 0 6
+flop 0
+invert 0
+gradientmap 0 rgba(255,255,0,0),0.5 yellow,1
+gradientmap 0 rgba(0,0,0,128) rgba(255,255,0,128)|{set:e|G-Major 65 V2}
+ffmpeg 0 -vf setpts=PTS/1.2 -af rubberband=tempo=1.2:pitch=1.2
+flip 0
+gradientmap 0 blue red yellow white|{set:e|Book From BFDI Major}
+{set:m|no image for now}
+gradientmap 0 green blue
+multipitch 0 -6,6
 }}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iscript:load {iv} 0
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iferror:{sh:
+load {iv}
+sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
+fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
+d=$(ffprobe -i $FILE_1 -show_entries format=duration -v quiet -of csv="p=0")
+w=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of default=nw=1:nk=1 $FILE_1)
+h=$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of default=nw=1:nk=1 $FILE_1)
+fc=$(ffprobe -v error -select_streams v:0 -show_entries stream=nb_frames -of default=nokey=1:noprint_wrappers=1 $FILE_1)
+ffmpeg -i $FILE_1 {get:fx} ./output/$(basename $FILE_1)}|{iscript:load {iv} 0
 get 0 width w
 get 0 height h
 get 0 duration d
 get 0 framecount fc
-{get:fx}
+{eval:{get:fx}}
 convert 0 video/mp4
-render 0}|{newline}But something went wrong. It's most likely a timeout or bad syntax.
+render 0}}|{newline}But something went wrong. It's most likely a timeout or bad syntax.
 Try inputting this to see if it will work:
--# `.t itest+ {get:fx}`}
+`.t inft {get:fx}`}
