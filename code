@@ -775,7 +775,8 @@ audioreverb 0 1 40 0.5
 audioreverb 0 1 50 0.5
 audioreverb 0 1 60 0.5
 audioreverb 0 1 70 0.5
-ffmpeg 0 -af atempo=2,atempo=4,asetrate=$sr/4,atempo=0.5,aresample=$sr
+{set:sr|{traversejson:channels.audio[0].sample_rate|{api.utilities.exif:{video}}}}
+ffmpeg 0 -af atempo=2,atempo=4,asetrate={get:sr}/4,atempo=0.5,aresample={get:sr}
 multipitch 0 24
 multipitch 0 -12,-5,0,4,7,12
 copy 0 1
@@ -1238,7 +1239,140 @@ flip 0
 gradientmap 0 blue red yellow white|{set:e|Book From BFDI Major}
 {set:m|no image for now}
 gradientmap 0 green blue
-multipitch 0 -6,6
+multipitch 0 -6,6|{set:e|G-Major 122}
+vegaswave 0 0 0 0 0 0 10 0.04 0.8
+waaw 0
+invert 0
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+hueshifthsv 0 180
+vegaswave 0 56.5 10 0.01 0 0 0 0 0
+multipitch 0 0,5
+multipitch 0 -2.5,0.5,2.5,5.5
+audiodestroy 0|{set:e|{choose:Glitchy 1.0|???}}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1555824889141792789/ScreenRecording_10-03-2026_02-11-14_1.1048da8a.mp3 boink
+repeatduration boink d
+resize 0 h h
+ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.375+(hypot((X-W*0.375)/0.125,(Y-H*0.25)/0.125))*cos((atan2((Y-H*0.25)*0.125,(X-W*0.375)*0.125))+((0.15)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.375)/0.125,(Y-H*0.25)/0.125),min(W,H)),1-(hypot((X-W*0.375)/0.125,(Y-H*0.25)/0.125))/(min(W,H)),0)^2))*0.125,H*0.25+(hypot((X-W*0.375)/0.125,(Y-H*0.25)/0.125))*sin((atan2((Y-H*0.25)*0.125,(X-W*0.375)*0.125))+((0.15)*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.375)/0.125,(Y-H*0.25)/0.125),min(W,H)),1-(hypot((X-W*0.375)/0.125,(Y-H*0.25)/0.125))/(min(W,H)),0)^2))*0.125)',setsar=1:1,format=yuv420p
+resize 0 w h
+audioputreplace 0 boink|{set:e|Beatbox TV}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1555969243965825154/ScreenRecording_10-03-2026_11-32-44_1.da0bd656.mp3 boink
+repeatduration boink d
+tvsimulator 0 0.75
+ffmpeg 0 -vf format=yuv444p,lutrgb='lerp(val,val*1.15,0.25)':'lerp(val,val*1.15+48,0.25)':'lerp(val,val*1.15+64,0.25)',geq=r='p(X,Y)*lerp(1,(sin(0.5+(Y/H-0.5)*(300/1))+1)/2,0.5)':g='p(X,Y)*lerp(1,(sin(0.5+(Y/H-0.5)*(300/1))+1)/2,0.5)':b='p(X,Y)*lerp(1,(sin(0.5+(Y/H-0.5)*(300/1))+1)/2,0.5)',geq=r='min(p(X,Y)+max(cos(Y/H*(5/1)-mod(T*16.666666*0.5,5))*128-64,0),255)':g='min(p(X,Y)+max(cos(Y/H*(5/1)-mod(T*16.666666*0.5,5))*128-64,0),255)':b='min(p(X,Y)+max(cos(Y/H*(5/1)-mod(T*16.666666*0.5,5))*128-64,0),255)'
+audioputreplace 0 boink|{set:e|Glitchy 2.0}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1555720542294904943/convert.082a830d.mp3 boink
+repeatduration boink d
+volume boink 5
+tvsimulator 0 0.75
+audioputreplace 0 boink|{set:e|Nameless Effect 2.0}
+{set:sr|{traversejson:channels.audio[0].sample_rate|{api.utilities.exif:{video}}}}
+ffmpeg 0 -vf format=yuv444p,geq='p(X+(sin(X/18.8496/480*W)*8*480/W)*asin(sin(T*1.0472)),Y+(sin(Y/14.1372/360*H)*8*360/H)*asin(sin(T*0.785398)))',format=yuv420p -af atempo=2,atempo=4,asetrate={get:sr}/4,atempo=0.5,aresample={get:sr}
+multipitch 0 24|{set:e|Sailor Mercury Effect}
+flop 0
+tvsimulator 0 0.75
+vegaswave 0 0 5.4 0.05 0 0 5.4 0.05 0
+{set:sr|{traversejson:channels.audio[0].sample_rate|{api.utilities.exif:{video}}}}
+ffmpeg 0 -af atempo=2,atempo=4,asetrate={get:sr}/4,atempo=0.5,aresample={get:sr}|{set:e|Deformed}
+hueshifthsv 0 180
+foreachframe 0 0 fc "hueshifthsv 0x idx/fc*360-180"
+ffmpeg 0 -vf format=yuv444p,geq='p(X+(sin(X/18.8496/480*W)*8*480/W)*asin(sin(T*1.0472)),Y+(sin(Y/14.1372/360*H)*8*360/H)*asin(sin(T*0.785398)))',format=yuv420p,setpts=PTS*4 -af rubberband=formant=71292300:tempo=0.25
+setfps 0 fc/d|{set:e|Pinch Wacky}
+pinchpunch 0 -1
+multipitch 0 12|{set:e|SV-OQ Combo}
+invert 0
+hueshifthsv 0 180 50
+tvsimulator 0 0.75 4
+shake 0 0 true 20
+multipitch 0 -12,-5,0,4,7,12|{set:e|IFOE Effect}
+gradientmap 0 cyan black
+huecurvergba 0 0,0.495 1,0.505
+multipitch 0 -6|{set:e|Threshold Major}
+huecurvergba 0 0,0.495 1,0.505
+multipitch 0 11,14|{set:e|Ear Bleed}
+{set:m|audio is inaccurate}
+swaprgba 0 b00
+huecurvergba 0 red 0.27 1
+pinchpunch 0 0.5
+audiodestroy 0|{set:e|Red Major}
+gradientmap 0 black red black
+multipitch 0 -4|{set:e|Ear Bleed 2.0}
+{set:m|audio is inaccurate}
+gradientmap 0 black red black
+pinchpunch 0 0.5
+audiobitcrush 0 6 8 1 lin
+audiodestroy 0|{set:e|Conga Busher 2.0}
+{set:m|audio might be inaccurate}
+hueshifthsv 0 360*0.4
+waaw 0
+audiobitcrush 0 20 3 1 lin|{set:e|R-Major 2002}
+gradientmap 0 black,0 rgb(104,0,52),0.3 red,0.5 white,1
+multipitch 0 -5,-5,2|{set:e|G-Major 36 V2}
+{set:m|nitrogen monoxide}
+invert 0
+hueshitfhsv 0 180
+contrastmultiply 0 -1
+invert 0
+pinchpunch 0 -1 0.348 0.389 0.5 0.5
+haah 0
+multipitch 0 -10,0,10
+audiodestroy 0|{set:e|X Caught A Cold}
+invert 0
+hueshitfhsv 0 180
+contrastmultiply 0 -1
+multipitch 0 -10,-6|{set:e|G-Major 602}
+hueshifthsv 0 180
+invert 0
+swaprgba 0 bgr
+pinchpunch 0 1
+pinchpunch 0 1
+multipitch 0 3,-2,-5,-9,-14,-21|{set:e|ProMegaLogoEditor Major 10}
+hueshifthsv 0 -120
+invert 0
+swirl 0 100
+vegaswave 0 0 0 0 0 0 10 0.04 0.8
+swirl 0 -100
+multipitch 0 12,4,-3,-12|{set:e|Y-Major 53}
+vegaswave 0 -25.13 4 0.04 0 0 0 0
+vegaswave 0 0 0 0 0 0 10 0.04 0.8
+hueshitfhsv 0 -34
+waaw 0
+multipitch 0 2.5,10.5|{set:e|G-Major 577}
+multipitch 0 14,3,-2,-7|{set:eMario Esponja 28 Major}
+hueshitfhsv 0 -60 100
+pinchpunch 0 1
+multipitch 0 -12,-7,-5,0,5,7,12|{set:e|Wipe Effect}
+hueshifthsv 0 180
+swirl 0 -150
+haah 0
+woow 0
+multipitch 0 -8|{set:e|G-Major 74 (Braxton Hudson)}
+contrastmultiply 0 -1
+pinchpunch 0 1
+pinchpunch 0 -1
+multipitch 0 -3,2|{set:e|G-Major 808}
+hueshifthsv 0 180
+swirl 0 -150
+pinchpunch 0 -1
+multipitch 0 1,6|{set:e|ClearFlip}
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
+flop 0
+swaprgba 0 r00
+huecurvergba 0 red 0.27 0.8
+swaprgba 0 rgr
+vocode 0 car
+copy 0 1
+multipitch 1 12
+vocode 0 1|{set:e|Loudly Crying}
+hueshiftccs 0 120
+vegaswave 0 0 0 0 0 0 10 0.08 0.8
+multipitch 0 0,-5,-5,-10|{set:e|Meat Aid}
+hueshifthsv 0 120
+vegaswave 0 0 0 0 0 12.56636 32 0.02 0
+multipitch 0 1
+{choose:vocode 0 0|pinchpunch 0 0}|{set:e|Micah Major}
+hueshifthsv 0 -50
+pinchpunch 0 1
+swirl 0 130
 }}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
 you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iferror:{sh:
 load {iv}
