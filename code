@@ -1160,7 +1160,7 @@ gray 0
 create 1 w h 159 165 0 255
 opacity 1 72*0.63
 overlay 0 1
-multipitch 0 6,2|{set:e|G-Major 32
+multipitch 0 6,2|{set:e|G-Major 32}
 invert 0
 ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H*8,H))',format=yuv420p
 tvsimulator 0 0.45
@@ -1211,7 +1211,9 @@ hueshifthsv 0 180
 foreachframe 0 0 fc "hueshifthsv 0x idx/fc*360-180"
 multipitch 0 -10,-6,0
 audiovibrato 0 1 1|{set:e|Ahhhhh}
-foreachframe 0 0 fc "swirl 0x 360*sin(idx/4*3/(fc/d))"
+resize 0 h h
+ffmpeg 0 -vf format=yuv444p16le,geq='p(W*0.5+(hypot((X-W*0.5)/2,(Y-H*0.5)/2))*cos((atan2((Y-H*0.5)*2,(X-W*0.5)*2))+((sin(T*1.5))*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/2,(Y-H*0.5)/2),min(W,H)),1-(hypot((X-W*0.5)/2,(Y-H*0.5)/2))/(min(W,H)),0)^2))*2,H*0.5+(hypot((X-W*0.5)/2,(Y-H*0.5)/2))*sin((atan2((Y-H*0.5)*2,(X-W*0.5)*2))+((sin(T*1.5))*(PI^2)*(-255/180))*(if(lt(hypot((X-W*0.5)/2,(Y-H*0.5)/2),min(W,H)),1-(hypot((X-W*0.5)/2,(Y-H*0.5)/2))/(min(W,H)),0)^2))*2)'",setsar=1:1,format=yuv420p
+resize 0 w h
 multipitch 0 -6|{set:e|Too Dark In Pitch}
 brightness 0 -20
 multipitch 0 -4|{set:e|Fast & Slow}
