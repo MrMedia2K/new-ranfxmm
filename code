@@ -1,5 +1,5 @@
-yet another ranfx+ remake.
-{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrigen monoxide|damn is 😂🎉|if you see “the creator of ranfx is problematic”, they’re taking about yasinreturns not me (mr.media2k)}{set:h|{range:0|1}}{set:m|}{set:o|1}
+this is the new ranfxmm, but the old one is still up on a different tag.
+{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrogen monoxide|damn is 😂🎉|if you see “the creator of ranfx is problematic”, they’re taking about yasinreturns not me (mr.media2k)|I AM NOT YASIN NOR AM I AN ALT|element cattos is peak|meow :3|:BeeboWhar:|hi|random effect generator}{set:h|{range:0|1}}{set:m|}{set:o|1}
 {set:e|Fallback}{set:fx|{choose:{set:e|G-Major 4}
 gradientmap 0 rgba(0,0,0,0),0.5 black
 multipitch 0 0,5|{set:e|CoNfUsIoN}
@@ -359,12 +359,13 @@ pinchpunch 0 -0.5
 multipitch 0 -2|{set:e|Rotation Wave}
 foreachframe 0 0 fc "rotate 0x -180*idx/fc none true"
 vegaswave 0 0 2 0.1 0 0 0 0 0
-multipitch 0 -4|{set:e|Crazy Slow Killed{if:{get:h}|=|0|then: (No Speed)}}
+multipitch 0 -4|{set:e|Crazy Slow Killed {if:{get:h}|=|0|then: (No Speed)}}
 hueshifthsv 0 60
 pinchpunch 0 1
-vegaswave 0 0 2 0.1 0 0 0 0 0
-vegaswave 0 0 0 0 0 0 2 0.1 0
-{if:{get:h}|=|1|then:speed 0 0.25}|{set:e|Ripple Pitch}
+vegaswave 0 0 4 0.1 0 0 0 0 0
+vegaswave 0 0 0 0 0 0 4 0.1 0
+{if:{get:h}|=|1|then:speed 0 0.25}
+multipitch 0 6|{set:e|Ripple Pitch}
 hueshifthsv 0 -120
 detunnel 0
 wiggle 0 right 30 4
@@ -822,14 +823,15 @@ vegaswave 0 0 4 0.05 0 0 4 0.05 0
 multipitch 0 -12,0,7|{set:e|Nike Chorded}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563624044979294228/Untitled731_20261024144336.png ov
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563620815155757106/convert.d2369ac1.mp3 car
-gradientmap 0 white black{if:{get:h}|=|1|then: #404040}
+gradientmap 0 white black {if:{get:h}|=|1|then:#404040}
 audiopitch 0 2**(-1/2)
 fit ov w h
 flip 0
 flip ov
 overlay 0 ov
 flip 0
-vocode 0 car|{set:e|Deforming X}
+vocode 0 car
+volume 0 10|{set:e|Deforming X}
 multipitch 0 -12
 ffmpeg 0 -af afreqshift=500
 rotate 0 90
@@ -1372,9 +1374,254 @@ multipitch 0 1
 {choose:vocode 0 0|pinchpunch 0 0}|{set:e|Micah Major}
 hueshifthsv 0 -50
 pinchpunch 0 1
-swirl 0 130
+swirl 0 130|{set:e|Flammable Oil}
+ffmpeg 0 -vf format=yuv444p,geq=r='p(X,Y)+128':g='p(X,Y)+128':b='p(X,Y)+128',format=yuv420p -af acontrast=100,acontrast=100
+hueshifthsv 0 180
+multipitch 0 -4,4|{set:e|Slow Voice (Mr.Media2K)}
+hueshifthsv 0 120
+tvsimulator 0 0.75
+multipitch 0 0.0391
+ffmpeg 0 -vf setpts=PTS/8*9 -af rubberband=tempo=8/9:pitch=8/9
+setfps 0 fc/d|{set:e|Dead Voice}
+{set:o|2}
+hueshiftccs 0 180
+hueshifthsv 0 120
+haah 0
+multipitch 0 0.01955
+ffmpeg 0 -vf setpts=PTS/2*3 -af rubberband=tempo=2/3:pitch=2/3
+setfps 0 fc/d|{set:e|Dead Voice (Mr.Media2K)}
+hueshifthsv 0 -60
+tvsimulator 0 0.75
+haah 0
+multipitch 0 0.01955
+ffmpeg 0 -vf setpts=PTS/2*3 -af rubberband=tempo=2/3:pitch=2/3
+setfps 0 fc/d|{set:e|Poor 20th}
+load https://cdn.discordapp.com/attachments/1120656275869536286/1385151135567843431/snip.wav car
+hueshifthsv 0 180
+vocode 0 car|{set:e|20th X}
+load https://cdn.discordapp.com/attachments/1502102376440529048/1564849810639552592/TCF_1994_Fanfare_Looped.wav car
+repeatduration car d
+huecurvergba 0 blue 0.1 1
+hueshifthsv 0 180 50
+huecurvergba 0 red 0.1 1
+vocode 0 car|{set:e|G-Major 32 (I Love Making Videos)}
+invert 0
+hueshiftccs 0 180
+tvsimulator 0 0.75
+multipitch 0 -8,-6,-3,0|{set:e|G-Major 5 (PV Super 474)}
+gradientmap 0 blue red yellow white
+multipitch 0 -4,2|{set:e|G-Major (NicholasTheVideoMaker2005)}
+gradientmap 0 black red blue red black
+multipitch 0 10,9,2,-3,-7|{set:e|G-Major 15 (Mario Buitron)}
+{set:m|idk how to use the eq so i’m not gonna use it here}
+vegaswave 0 0 0 0 0 0 10 0.04 0.8
+swaprgba 0 r00
+huecurvergba 0 red 0.27 1
+tvsimulator 0 0.75
+multipitch 0 0,5
+audiodestroy 0|{set:e|Mari Group (DanielStanciuc)}
+hueshifthsv 0 0.3*360
+multipitch 0 1|{set:e|Blue-Violet Wave}
+huecurvergba 0 blue 0 0.75 1
+vegaswave 0 0 0 0 0 0 20.57 0.015 5.459
+copy 0 1
+swaprgba 0 00b
+blur 0 30
+blend 0 1 add
+multipitch 0 -3,0,3
+volume 0 0.333
+multipitch 0 -0.1,0,0.1|{set:e|Blue-Violet Wave 1.0}
+gradientmap 0 rgb(50,0,255) rgba(255,255,255,150) rgb(50,0,255)
+vegaswave 0 0 0 0 0 0 20.57 0.015 5.459
+copy 0 1
+swaprgba 0 00b
+blur 0 30
+blend 0 1 add
+multipitch 0 8,-4
+volume 0 0.333
+multipitch 0 -0.1,0,0.1|{set:e|G-Major 66}
+gradientmap 0 white black white black white black
+invert 0
+multipitch 0 -2.25,-4.5,-6.5,-8|{set:e|Swimming}
+gradientmap 0 rgb(22,15,255) black rgb(75,120,255)
+tvsimulator 0 0.75 4
+ffmpeg 0 -vf geq=r='min(p(X,Y)+max(cos(Y/H*(5/4)-mod(T*16.666666*0.5,5))*128-64,0),255)':g='min(p(X,Y)+max(cos(Y/H*(5/4)-mod(T*16.666666*0.5,5))*128-64,0),255)':b='min(p(X,Y)+max(cos(Y/H*(5/4)-mod(T*16.666666*0.5,5))*128-64,0),255)'
+copy 0 1
+convert 1 audio/wav
+ffmpeg 1 -af rubberband=tempo=17.9593927729:pitch=17.9593927729
+repeatduration 1 d
+ffmpeg 1 -af rubberband=tempo=17.9593927729:pitch=17.9593927729
+ffmpeg 1 -af rubberband=tempo=0.05568116988:pitch=0.05568116988
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audiovibrato 1 1 9
+audioputreplace 0 1|{set:e|TV Gargle Bite}
+load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 car
+gradientmap 0 rgb(255,100,255) rgb(145,0,255) white
+tvsimulator 0 0.75
+vocode 0 car 18
+copy 0 1
+audiovibrato 0 1 0.5
+audiovibrato 1 0.9 0.7
+audioputmix 0 1|{set:e|Bruor Macaneli Tet Cheese}
+swaprgba 0 0g0
+huecurvergba 0 green 0.27 1
+hueshifthsv 0 27
+waaw 0
+multipitch 0 -19.5|{set:e|G-Major 445}
+flop 0
+invert 0
+hueshitfhsv 0 180
+multipitch 0 -36|{set:e|G-Major 337 (P OSO)}
+gradientmap 0 black orange pink orange pink orange pink
+swaprgba 0 grb
+multipitch 0 -48|{set:e|Super Slow}
+gradientmap 0 black red white
+flop 0
+foreachframe 0 0 fc "vegaswave 0x 0 0.75 (idx/fc)*(1-idx/fc)*0.2 idx/fc*6.2832 0 0 0 0"
+huecurvergba 0 all 0,0.495 1,0.505
+multipitch 0 -34|{set:e|X Is High}
+foreachframe 0 0 fc "vegaswave 0x 0 32*idx/fc 0.5*idx/fc idx/fc 0 32*idx/fc 0.5*idx/fc idx/fc"
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1
+audiovibrato 0 1 1|{set:e|X Is Partying}
+hueshifthsv 0 180
+gradientmap 0 rgba(0,0,0,0),0.5 black 1
+foreachframe 0 0 fc "vegaswave 0x 0 32*idx/fc 0.5*idx/fc idx/fc 0 32*idx/fc 0.5*idx/fc idx/fc"
+multipitch 0 1|{set:e|Medium Voice}
+hueshitfhsv 0 0.65*360
+hooh 0
+ffmpeg 0 -vf setpts=PTS/0.95 -af rubberband=tempo=0.95:pitch=0.95
+setfps 0 fc/d|{set:e|G-Minor 68 (American2004)}
+invert 0
+hueshifthsv 0 0.4295*360
+haah 0
+multipitch 0 0,0.2
+audioreverse 0|{set:e|Sugarcore X}
+loadlut hyyps://cdn.discordapp.com/attachments/1124758906376302632/1504401982197338192/Sugarcore_X.cube lut
+applylut 0 lut
+multipitch 0 -1,3.5,15.5|{set:e|G-Major 50 (YTLES2406)}
+hueshitfhsv 0 -81
+pinchpunch 0 -1
+multipitch 0 -5,-3,3,8|{set:e|G-Major 51 (YTLES2406)}
+invert 0
+haah 0
+swirl 0 -130
+multipitch 0 -5,-4.5,0,0.5|{set:e|Mirror Mirror 567}
+swaprgba 0 bgr
+hooh 0
+multipitch 0 -7,6|{set:e|G-Major 82 (TKCF2012)}
+flop 0
+hueshifthsv 0 21.6
+multipitch 0 -5,7|{set:e|G-Major 84 (TKCF2012)}
+contrastmultiply 0 -1
+vegaswave 0 0 0 0 0 0 5 0.07 0
+multipitch 0 -7,9|{set:e|G-Major 100 (TKCF2012)}
+waaw 0
+swaprgba 0 bgr
+hueshiftccs 0 -160
+vegaswave 0 0 4 0.04 0 0 4 0.04 0
+multipitch 0 2,16|{set:e|G-Major 107 (TKCF2012)}
+invertrgba 0 1 1 0
+flop 0
+multipitch 0 -4,0,5|{set:e|Custom Major 23 (TKCF2012)}
+flip 0
+multipitch 0 -2,-6|{set:e|TKCF2012 Major 44}
+hueshitfhsv 0 -54
+haah 0
+multipitch 0 0,3|{set:e|Blue Major 4}
+gradientmap 0 black rgb(66,125,255)
+flop 0
+multipitch 0 -3,0|{set:e|Custom Major 24 (TKCF2012)}
+gray 0
+invert 0
+multipitch 0 1,0|{set:e|RGB Pitch}
+swaprgba 0 bgr
+hueshifthsv 0 180
+multipitch 0 0,3.5|{set:e|G-Major 64 (TKCF2012)}
+flop 0
+hueshiftccs 0 180
+contrastmultiply 0 -1
+multipitch 0 0,-0.1|{set:e|Pinchy Effect 1.0}
+pinchpunch 0 -1
+multipitch 0 4,-4|{set:e|G-Major 56 (TKCF2012)}
+contrastmultiply 0 -1
+swaprgba 0 bgr
+multipitch 0 -5,0|{set:e|G-Major 62 (TKCF2012)}
+hueshiftccs 0 232.653
+swaprgba 0 bgr
+multipitch 0 -7,9|{set:e|G-Major 200 (TKCF2012)}
+haah 0
+hueshitfhsv 0 -54
+vegaswave 0 0 0 0 0 0 4 -0.06 0
+multipitch 0 -5,-2,4|{set:e|G-Major 109 (TKCF2012)}
+pinchpunch 0 -0.01
+invert 0
+hueshitfhsv 0 126
+multipitch 0 -6,3|{set:e|Custom Major 25 (TKCF2012)}
+invert 0
+haah 0
+multipitch 0 1,6|{set:e|G-Major 41}
+invert 0
+hueshitfhsv 0 -60
+hooh 0
+waaw 0
+swirl 0 50
+multipitch 0 -4.5,0.5|[set:e|G-Major 42}
+swaprgba 0 bgr
+contrastmultiply 0 -1
+hueshitfhsv 0 180
+multipitch 0 -3,0,4,7|{set:e|G-Major 43}
+invert 0
+hueshifthsv 0 0.62*360
+vegaswave 0 0 0 0 0 0 18.5 0.036 0
+cover 0 w/2 h
+resize 0 w h
+pinchpunch 0 1
+multipitch 0 -2,0,10|{set:e|G-Major 45}
+hueshitfhsv 0 0.275*360
+invert 0
+gradientmap 0 rgba(0,0,0,0),0.5 black 1
+multipitch 0 2,6|{set:e|G-Major 46}
+hueshifthsv 0 0.2*360
+invert 0
+haah 0
+vegaswave 0 0 0 0 0 15.7 10 0.04 0
+multipitch 0 10|{set:e|G-Major 47}
+haah 0
+woow 0
+gradientmap 0 yellow black
+multipitch 0 -2|{set:e|G-Major 48}
+hueshitfhsv 9 0.6*360
+swirl 0 -200
+multipitch 0 0,3|{set:e|G-Major 49}
+hueshifthsv 0 0.35*360
+hooh 0
+haah 0
+multipitch 0 0,-0.69|{set:e|G-Major 50}
+swaprgba 0 bgr
+contrastmultiply 0 -1
+multipitch 0 6,9
 }}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{iferror:{iferror:{sh:
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{if:{arg:0}|=|raw|then:{newline}-# `{get:fx}`}{iferror:{iferror:{sh:
 load {iv}
 sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
 fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
