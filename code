@@ -1585,7 +1585,7 @@ hueshitfhsv 0 -60
 hooh 0
 waaw 0
 swirl 0 50
-multipitch 0 -4.5,0.5|[set:e|G-Major 42}
+multipitch 0 -4.5,0.5|{set:e|G-Major 42}
 swaprgba 0 bgr
 contrastmultiply 0 -1
 hueshitfhsv 0 180
