@@ -1452,18 +1452,19 @@ ffmpeg 1 -af rubberband=tempo=17.9593927729:pitch=17.9593927729
 repeatduration 1 d
 ffmpeg 1 -af rubberband=tempo=17.9593927729:pitch=17.9593927729
 ffmpeg 1 -af rubberband=tempo=0.05568116988:pitch=0.05568116988
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
-audiovibrato 1 1 9
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+audiovibrato 1 9 1
+volume 1 40
 audioputreplace 0 1|{set:e|TV Gargle Bite}
 load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 car
 gradientmap 0 rgb(255,100,255) rgb(145,0,255) white
@@ -1516,7 +1517,7 @@ hueshifthsv 0 0.4295*360
 haah 0
 multipitch 0 0,0.2
 audioreverse 0|{set:e|Sugarcore X}
-loadlut hyyps://cdn.discordapp.com/attachments/1124758906376302632/1504401982197338192/Sugarcore_X.cube lut
+loadlut https://cdn.discordapp.com/attachments/1124758906376302632/1504401982197338192/Sugarcore_X.cube lut
 applylut 0 lut
 multipitch 0 -1,3.5,15.5|{set:e|G-Major 50 (YTLES2406)}
 hueshitfhsv 0 -81
@@ -1621,7 +1622,7 @@ swaprgba 0 bgr
 contrastmultiply 0 -1
 multipitch 0 6,9
 }}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{if:{arg:0}|=|raw|then:{newline}-# `{get:fx}`}{iferror:{iferror:{sh:
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{if:{arg:0}|=|raw|then:{newline}`{get:fx}`}{iferror:{iferror:{sh:
 load {iv}
 sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
 fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
