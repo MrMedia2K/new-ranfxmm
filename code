@@ -1,4 +1,4 @@
-this is the new ranfxmm, but the old one is still up on a different tag.{if:{tagownerid}|=|958167624133521488|then:|else:**the owner of this tag is not the person who made the code (mr.media2k)!**}
+this is the new ranfxmm, but the old one is still up on a different tag.{if:{tagownerid}|=|958167624133521488|then:|else:{newline}**the owner of this tag is not the person who made the code (mr.media2k)!**}
 {choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrogen monoxide|damn is 😂🎉|if you see “the creator of ranfx is problematic”, they’re taking about yasinreturns not me (mr.media2k)|I AM NOT YASIN NOR AM I AN ALT|element cattos is peak|meow :3|:BeeboWhar:|hi|random effect generator}{set:h|{range:0|1}}{set:m|}{set:o|1}
 {set:e|Fallback}{set:fx|{choose:{set:e|G-Major 4}
 gradientmap 0 rgba(0,0,0,0),0.5 black
