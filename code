@@ -1,6 +1,6 @@
 this is the new ranfxmm, but the old one is still up on a different tag.
 {if:{tagownerid}|=|958167624133521488|then:|else:**the owner of this tag is not the person who made the code (mr.media2k)!**}
-{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrogen monoxide|damn is 😂🎉|if you see "the creator of ranfx is problematic", they’re taking about yasinreturns not me (mr.media2k)|I AM NOT YASIN NOR AM I AN ALT|element cattos is peak|meow :3|:BeeboWhar:|hi|random effect generator}{set:h|{range:0|1}}{set:m|}{set:o|1}
+{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrogen monoxide|damn is 😂🎉|if you see "the creator of ranfx is problematic", they’re taking about yasinreturns not me (mr.media2k)|I AM NOT YASIN NOR AM I AN ALT|element cattos is peak|meow :3|:BeeboWhar:|hi|random effect generator}{set:h|{range:0|1}}{set:m|}{set:o|1}{set:c|}
 {set:e|Fallback}{set:fx|{choose:{set:e|G-Major 4}
 gradientmap 0 rgba(0,0,0,0),0.5 black
 multipitch 0 0,5|{set:e|CoNfUsIoN}
@@ -1979,9 +1979,166 @@ multipitch 0 -8,4,9,11|{set:e|Invert Color (Tiago Pariona Channel)}
 invert 0
 audioreverse 0|{set:e|Wibbly Major}
 ffmpeg 0 -vf format=yuv444p,geq=r='p(X,Y)*2':g='p(X,Y)*2':b='p(X,Y)*2',format=yuv420p -af afreqshift=1000
-vegaswave 0 62.8/d 0.1 0.5 0 62.8/d 0.1 0.5 0
+vegaswave 0 62.8/d 0.1 0.5 0 62.8/d 0.1 0.5 0|{set:e|A-Major (2014?)}
+{set:m|the original version of A-Major. yes, it was this}
+{set:c|1539224590922948719}
+invert 0
+copy 0 0a
+convert 0a audio/flac
+multipitch 0a 0,-3
+audioputreplace 0 0a|{set:e|G-Major 109}
+hueshifthsv 0 0.35*360
+hooh 0
+multipitch 0 3|{set:e|G-Major 59 (Carlos Virgilio)
+reverse 0
+flop 0
+detunnel 0
+wiggle 0 right 30 4 true
+tunnel 0
+flop 0
+resize 0 512 512
+rotate 0 -90
+distort 0 arc 30 90
+contain 0 640 512
+distort 0 bilinear_forward 88 70 -116 -74 60 303 -48 395 550 30 642 -24 553 382 642 368
+resize 0 w h
+flop 0
+multipitch 0 0,-1.5
+ffmpeg 0 -vf setpts=PTS/0.74 -af rubberband=pitch=2^(-5/12):tempo=0.74
+setfps 0 fc/d|{set:e|G-Major 108}
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
+vocode 0 car
+create 1 w h/2 0 0 0 100
+join 0 1 true
+crop 0 w h*0.65 0 h/2
+gradientmap 0 black,0 rgb(255,210,133),0.425 rgb(255,195,144),0.5 black,0.75 rgb(66,36,13),0.875
+resize 1 w h*0.35
+woow 0
+join 0 1 true
+woow 0|{set:e|G-Major 74 (Dark55)}
+hueshifthsv 0 180
+hueshiftccs 0 180
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+pinchpunch 0 -1 0.348 0.389 0.5 0.5
+multipitch 0 -10,-3,2,6,9,14|{set:e|G-Major 125}
+copy 0 1
+swaprgba 1 bgr
+fadein 1 d
+fadeout 0 d
+multipitch 0 0,-14|{set:e|G-Major E}
+hueshiftccs 0 230
+tvsimulator 0 0.75
+multipitch 0 -3,3,12|{set:e|G-Major B}
+hueshiftccs 0 230.2
+invert 0
+swirl 0 -130
+multipitch 0 -3,5,11|{set:e|Extra Scary G-Major V2}
+gradientmap 0 red black red black red black red black red
+multipitch 0 -12,-9,-6,-5,-4,-2,-1,0|{set:e|G-Major D}
+gradientmap 0 rgba(0,0,0,0),0.5 black,1
+swaprgba 0 bgr
+multipitch 0 -24,-21,-18,-15,-12|{set:e|G-Major 107}
+create 1 w/2 h 0 0 0 100
+join 0 1
+haah 0
+crop 0 w h
+waaw 0
+gradientmap 0 yellow,0.2 rgb(255,128,0),0.5 blue,0.675 yellow,0.725 rgb(255,128,0),0.775 red,0.825
+load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
+vocode 0 car|{set:e|G-Major 24 (CYRYUSBOI02)}
+hueshifthsv 0 0.116*360
+haah 0
+multipitch 0 -11,-6,1|{set:e|Fake G-Major}
+invert 0
+multipitch 0 -12,0,12|{set:e|Terrible Effect}
+gradientmap 0 rgb(0,255,100) black,0.75 white
+multipitch 0 -14,-7,0,7,14|{set:e|Red Sponge Effect}
+{set:m|i haven’t tested out timecode yet so it’s not here}
+gradienmap 0 blue red rgba(0,0,0,0)
+multipitch 0 3,7|{set:e|Cartoon Network Major}
+gradientmap 0 black white rgba(0,0,0,0) white black
+multipitch 0 -2.5
+copy 0 1
+multipitch 1 -12
+vocode 0 1 512
+multipitch 0 -1|{set:e|Electrodynamix}
+gradientmap 0 white lime cyan blue
+multipitch 0 -2,5|{set:e|I Wind Of X}
+contrastmultiply 0 -1
+pinchpunch 0 1
+multipitch 0 -12,24|{set:e|iiZayden400 Preview 2 Effect 1}
+contrastmultiply 0 -1
+rotate 0 180
+multipitch 0 7|{set:e|iiZayden400 Preview 2 Effect 2}
+invert 0
+pinchpunch 0 -1
+multipitch 0 8|{set:e|iiZayden400 Preview 2 Effect 3}
+invertrgba 0 1 0 1
+tvsimulator 0 0.75
+multipitch 0 5|{set:e|Oops, you broke it!}
+vegaswave 0 22 2 0.1 0 22 4 0.1 0
+multipitch 0 -8
+audiodestroy 0|{set:e|Fast Voice}
+ffmpeg 0 -vf setpts=PTS/4*3 -af rubberband=tempo=4/3
+setfps 0 fc/d
+hueshifthsv 0 180
+waaw 0
+multipitch 0 5|{set:e|Opposite Slow Voice}
+ffmpeg 0 -vf setpts=PTS/3*2 -af rubberband=tempo=3/2
+setfps 0 fc/d
+hueshifthsv 0 -120
+haah 0
+multipitch 0 2|{set:e|G-Minor}
+invert 0
+multipitch 0 12,5,0,-4,-7,-12|{set:e|G-Minor 1}
+invert 0
+hueshifthsv 0 180
+multipitch 0 -8|{set:e|G-Minor 2}
+invertrgba 0 0 0 1
+multipitch 0 5,0,-4|{set:e|G-Minor 3}
+swaprgba 0 r00
+huecurvergba 0 red 0.27 1
+hueshifthsv 0 180
+flop 0
+tvsimulator 0 0.5
+flop 0
+multipitch 0 0,6|{set:e|G-Minor 4}
+huecurvergba 0 all 1 0 1
+multipitch 0 0,-5|{set:e|G-Minor 5}
+invertrgba 0 1 0 0
+multipitch 0 0,-4|{set:e|G-Minor 6}
+huecurvergba 0 all 0.25 0.75
+multipitch 0 0,8|{set:e|G-Minor 7}
+invert 0
+multipitch 0 0,-3|{set:e|G-Minor 8}
+invert 0
+hueshifthsv 0 180
+huecurvergba 0 all 0.25 0.75
+multipitch 0 0,7|{set:e|G-Minor 9}
+invert 0
+gradientmap 0 #97e300 #004550 rgba(255,255,255,200)
+invert 0
+multipitch 0 12,0,-5,-7|{set:e|G-Minor 10}
+waaw 0
+swaprgba 0 bgr
+hueshifthsv 0 180
+invert 0
+multipitch 0 12,5,0,-4,-7,-12
+multipitch 0 0,1|{set:e|Swirlpad}
+load https://www.youtube.com/watch?v=Ck_X3OsxfQw car
+gradientmap 0 white blue white
+foreachframe 0 0 fc "swirl 0 idx/fc*-720+360"
+vocode 0 car|{set:e|Beauty}
+load https://www.youtube.com/watch?v=lbE6HDmJPgw car
+gradientmap 0 magenta white magenta
+vocode 0 car|{set:e|2.0 I KILLED X}
+{set:o|2}
+hueshifthsv 0 120
+pinchpunch 0 1
+pinchpunch 0 1
+multipitch 0 -16
 }}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# "{get:m}"}{if:{arg:0}|=|raw|then:{newline}-# `{get:fx}`}{iferror:{iferror:{sh:
+you got **{get:e}!**{if:{len:{get:c}}|=|0|then:|else:{newline}code by {mention:{get:c}}}{if:{len:{get:m}}|=|0|then:|else:{newline}-# "{get:m}"}{if:{arg:0}|=|raw|then:{newline}-# `{get:fx}`}{iferror:{iferror:{sh:
 load {iv}
 sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
 fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
