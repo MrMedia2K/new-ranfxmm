@@ -2125,11 +2125,11 @@ hueshifthsv 0 180
 invert 0
 multipitch 0 12,5,0,-4,-7,-12
 multipitch 0 0,1|{set:e|Swirlpad}
-load https://www.youtube.com/watch?v=Ck_X3OsxfQw car
+load https://cdn.discordapp.com/attachments/1565512218894925944/1565831760485548223/convert.02dc22b6.mp3 car
 gradientmap 0 white blue white
 foreachframe 0 0 fc "swirl 0 idx/fc*-720+360"
 vocode 0 car|{set:e|Beauty}
-load https://www.youtube.com/watch?v=lbE6HDmJPgw car
+load https://cdn.discordapp.com/attachments/1565512218894925944/1565831908426784999/convert.1763242b.mp3 car
 gradientmap 0 magenta white magenta
 vocode 0 car|{set:e|2.0 I KILLED X}
 {set:o|2}
