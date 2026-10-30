@@ -1,6 +1,6 @@
 this is the new ranfxmm, but the old one is still up on a different tag.
 {if:{tagownerid}|=|958167624133521488|then:|else:**the owner of this tag is not the person who made the code (mr.media2k)!**}
-{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrogen monoxide|damn is 😂🎉|if you see “the creator of ranfx is problematic”, they’re taking about yasinreturns not me (mr.media2k)|I AM NOT YASIN NOR AM I AN ALT|element cattos is peak|meow :3|:BeeboWhar:|hi|random effect generator}{set:h|{range:0|1}}{set:m|}{set:o|1}
+{choose:random dialouge like always|meow|:3|not every effect will be accurate since i’m using iscript for this|what should i add next|hhfbvefwhjbsevfhkbj|boredom|nitrogen monoxide|damn is 😂🎉|if you see "the creator of ranfx is problematic", they’re taking about yasinreturns not me (mr.media2k)|I AM NOT YASIN NOR AM I AN ALT|element cattos is peak|meow :3|:BeeboWhar:|hi|random effect generator}{set:h|{range:0|1}}{set:m|}{set:o|1}
 {set:e|Fallback}{set:fx|{choose:{set:e|G-Major 4}
 gradientmap 0 rgba(0,0,0,0),0.5 black
 multipitch 0 0,5|{set:e|CoNfUsIoN}
@@ -417,7 +417,7 @@ hueshifthsv 0 180
 hueshifthsv 1 -60
 multipitch 0 -1,-5
 overlay 0 1|{set:e|Going Weirdness Every}
-foreachframe 0 0 fc “cover 0 w/((({get:idx}/fc)**2)+1) h”
+foreachframe 0 0 fc "cover 0 w/((({get:idx}/fc)**2)+1) h"
 multipitch 0 -3,-8|{set:e|CoNfUsIoN 2.0}
 contrastmultiply 0 -1
 audioreverse 0|{set:e|X-Major 159}
@@ -1157,7 +1157,7 @@ waaw 0
 swirl 0 -150
 vegaswave 0 -18.84 10 0.02 0 0 0 0 0
 multipitch 0 0,-2.25|{set:e|G-Major 31}
-hueshitfhsv 0 0.85*360
+hueshifthsv 0 0.85*360
 invert 0
 gradientmap 0 rgba(0,0,0,0),0.5 black,1
 gray 0
@@ -1312,7 +1312,7 @@ gradientmap 0 black,0 rgb(104,0,52),0.3 red,0.5 white,1
 multipitch 0 -5,-5,2|{set:e|G-Major 36 V2}
 {set:m|nitrogen monoxide}
 invert 0
-hueshitfhsv 0 180
+hueshifthsv 0 180
 contrastmultiply 0 -1
 invert 0
 pinchpunch 0 -1 0.348 0.389 0.5 0.5
@@ -1320,7 +1320,7 @@ haah 0
 multipitch 0 -10,0,10
 audiodestroy 0|{set:e|X Caught A Cold}
 invert 0
-hueshitfhsv 0 180
+hueshifthsv 0 180
 contrastmultiply 0 -1
 multipitch 0 -10,-6|{set:e|G-Major 602}
 hueshifthsv 0 180
@@ -1337,11 +1337,11 @@ swirl 0 -100
 multipitch 0 12,4,-3,-12|{set:e|Y-Major 53}
 vegaswave 0 -25.13 4 0.04 0 0 0 0
 vegaswave 0 0 0 0 0 0 10 0.04 0.8
-hueshitfhsv 0 -34
+hueshifthsv 0 -34
 waaw 0
 multipitch 0 2.5,10.5|{set:e|G-Major 577}
 multipitch 0 14,3,-2,-7|{set:eMario Esponja 28 Major}
-hueshitfhsv 0 -60 100
+hueshifthsv 0 -60 100
 pinchpunch 0 1
 multipitch 0 -12,-7,-5,0,5,7,12|{set:e|Wipe Effect}
 hueshifthsv 0 180
@@ -1481,7 +1481,7 @@ waaw 0
 multipitch 0 -19.5|{set:e|G-Major 445}
 flop 0
 invert 0
-hueshitfhsv 0 180
+hueshifthsv 0 180
 multipitch 0 -36|{set:e|G-Major 337 (P OSO)}
 gradientmap 0 black orange pink orange pink orange pink
 swaprgba 0 grb
@@ -1508,7 +1508,7 @@ hueshifthsv 0 180
 gradientmap 0 rgba(0,0,0,0),0.5 black 1
 foreachframe 0 0 fc "vegaswave 0x 0 32*idx/fc 0.5*idx/fc idx/fc 0 32*idx/fc 0.5*idx/fc idx/fc"
 multipitch 0 1|{set:e|Medium Voice}
-hueshitfhsv 0 0.65*360
+hueshifthsv 0 0.65*360
 hooh 0
 ffmpeg 0 -vf setpts=PTS/0.95 -af rubberband=tempo=0.95:pitch=0.95
 setfps 0 fc/d|{set:e|G-Minor 68 (American2004)}
@@ -1520,7 +1520,7 @@ audioreverse 0|{set:e|Sugarcore X}
 loadlut hyyps://cdn.discordapp.com/attachments/1124758906376302632/1504401982197338192/Sugarcore_X.cube lut
 applylut 0 lut
 multipitch 0 -1,3.5,15.5|{set:e|G-Major 50 (YTLES2406)}
-hueshitfhsv 0 -81
+hueshifthsv 0 -81
 pinchpunch 0 -1
 multipitch 0 -5,-3,3,8|{set:e|G-Major 51 (YTLES2406)}
 invert 0
@@ -1546,7 +1546,7 @@ flop 0
 multipitch 0 -4,0,5|{set:e|Custom Major 23 (TKCF2012)}
 flip 0
 multipitch 0 -2,-6|{set:e|TKCF2012 Major 44}
-hueshitfhsv 0 -54
+hueshifthsv 0 -54
 haah 0
 multipitch 0 0,3|{set:e|Blue Major 4}
 gradientmap 0 black rgb(66,125,255)
@@ -1571,25 +1571,25 @@ hueshiftccs 0 232.653
 swaprgba 0 bgr
 multipitch 0 -7,9|{set:e|G-Major 200 (TKCF2012)}
 haah 0
-hueshitfhsv 0 -54
+hueshifthsv 0 -54
 vegaswave 0 0 0 0 0 0 4 -0.06 0
 multipitch 0 -5,-2,4|{set:e|G-Major 109 (TKCF2012)}
 pinchpunch 0 -0.01
 invert 0
-hueshitfhsv 0 126
+hueshifthsv 0 126
 multipitch 0 -6,3|{set:e|Custom Major 25 (TKCF2012)}
 invert 0
 haah 0
 multipitch 0 1,6|{set:e|G-Major 41}
 invert 0
-hueshitfhsv 0 -60
+hueshifthsv 0 -60
 hooh 0
 waaw 0
 swirl 0 50
 multipitch 0 -4.5,0.5|{set:e|G-Major 42}
 swaprgba 0 bgr
 contrastmultiply 0 -1
-hueshitfhsv 0 180
+hueshifthsv 0 180
 multipitch 0 -3,0,4,7|{set:e|G-Major 43}
 invert 0
 hueshifthsv 0 0.62*360
@@ -1598,7 +1598,7 @@ cover 0 w/2 h
 resize 0 w h
 pinchpunch 0 1
 multipitch 0 -2,0,10|{set:e|G-Major 45}
-hueshitfhsv 0 0.275*360
+hueshifthsv 0 0.275*360
 invert 0
 gradientmap 0 rgba(0,0,0,0),0.5 black 1
 multipitch 0 2,6|{set:e|G-Major 46}
@@ -1611,7 +1611,7 @@ haah 0
 woow 0
 gradientmap 0 yellow black
 multipitch 0 -2|{set:e|G-Major 48}
-hueshitfhsv 9 0.6*360
+hueshifthsv 9 0.6*360
 swirl 0 -200
 multipitch 0 0,3|{set:e|G-Major 49}
 hueshifthsv 0 0.35*360
@@ -1642,7 +1642,7 @@ resize 0 w h
 flop 0
 multipitch 0 -12|{set:e|Night Sleep Effect}
 swaprgba 0 bgr
-hueshitfhsv 0 60
+hueshifthsv 0 60
 flop 0
 resize 0 512 512
 rotate 0 -90
@@ -1657,13 +1657,13 @@ vocode 0 uhh
 hueshifthsv 0 -144 50 -2.5|{set:e|Half Mari Group}
 hueshifthsv 0 30
 multipitch 0 0.5|{set:e|G-Major 52}
-hueshitfhsv 0 60
+hueshifthsv 0 60
 invert 0
 pinchpunch 0 0.5
 ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+H*T*1.5,H))',format=yuv420p
 tvsimulator 0 0.905
 multipitch 0 7.49,12.39|{set:e|G-Major 53}
-hueshitfhsv 0 0.265*360
+hueshifthsv 0 0.265*360
 swirl 0 -150
 multipitch 0 3.59,5.39|{set:e|G-Major 54}
 gradientmap 0 white red black
@@ -1682,7 +1682,7 @@ cover 0 w h/2
 resize 0 w h
 swirl 0 150
 multipitch 0 6|{set:e|G-Major 59}
-hueshitfhsv 0 0.44*360
+hueshifthsv 0 0.44*360
 invert 0
 waaw 0
 pinchpunch 0 -1
@@ -1699,11 +1699,11 @@ resize 0 w h
 multipitch 0 -1,2|{set:e|G-Major 62}
 swaprgba 0 bgr
 invert 0
-hueshitfhsv 0 -60
+hueshifthsv 0 -60
 haah 0
 multipitch 0 3,9|{set:e|G-Major 62}
 huecurvergba 0 all 0,0.45 1,0.55
-hueshitfhsv 0 0.714*360
+hueshifthsv 0 0.714*360
 tvsimulator 0 0.5
 multipitch 0 -14,-4,6|{set:e|G-Major 63}
 gray 0
@@ -1740,7 +1740,7 @@ multipitch 0 -13|{set:e|G-Major 70}
 gradientmap 0 black red
 tvsimulator 0 0.75
 multipitch 0 -4,0|{set:e|G-Major 71}
-hueshitfhsv 0 0.35*360
+hueshifthsv 0 0.35*360
 swirl 0 150
 detunnel 0
 wiggle 0 15 4 true
@@ -1756,7 +1756,7 @@ multipitch 0 -24,-17|{set:e|G-Major 75}
 flop 0
 swaprgba 0 bgr
 invert 0
-hueshitfhsv 0 0.663*360
+hueshifthsv 0 0.663*360
 tvsimulator 0 0.65
 multipitch 0 -4,-3,-2,-1,0|{set:e|G-Major 76}
 swaprgba 0 bgr
@@ -1765,7 +1765,7 @@ hueshifthsv 0 0.83*360
 multipitch 0 -6,-3,3|{set:e|G-Major 77}
 invert 0
 swaprgba 0 bgr
-hueshitfhsv 0 180
+hueshifthsv 0 180
 swirl 0 -130
 tvsimulator 0 0.75
 waaw 0
@@ -1776,11 +1776,11 @@ multipitch 0 12,16|{set:e|G-Major 79}
 swaprgba 0 r00
 huecurvergba 0 red 0.27 1
 tvsimulator 0 0.5
-hueshitfhsv 0 180
+hueshifthsv 0 180
 waaw 0
 swirl 0 -174
 multipitch 0 -6,0|{set:e|G-Major 80}
-hueshitfhsv 0 0.64*360
+hueshifthsv 0 0.64*360
 huecurvergba 0 all 0 1 0
 multipitch 0 -10,4,9|{set:e|Weird AALI}
 {set:m|for the logokids}
@@ -1817,7 +1817,7 @@ ffmpeg 0 -vf colorchannelmixer=rr=0.5:rb=0.5:br=0.5:bb=0.5
 multipitch 0 -19,-14,-6,-3,0,7|{set:e|G-Major 667}
 swaprgba 0 bgr
 invert 0
-hueshitfhsv 0 0.147*360
+hueshifthsv 0 0.147*360
 pinchpunch 0 -1
 haah 0
 contrastmultiply 0 -1
@@ -1829,7 +1829,7 @@ multipitch 1 12
 multipitch 1 6,16,26,36,46
 audioputmix 0 1|{set:e|G-Major 99}
 swirl 0 -150
-hueshitfhsv 0 0.2*360
+hueshifthsv 0 0.2*360
 multipitch 0 3|{set:e|G-Major 88}
 gradientmap 0 rgb(255,75,255) rgb(0,25,75) black
 swirl 0 -50
@@ -1843,14 +1843,14 @@ contrastmultiply 0 -1
 pinchpunch 0 1
 invert 0
 multipitch 0 -12,-10,7,9,12,14|{set:e|G-Major 82}
-hueshitfhsv 0 -60
+hueshifthsv 0 -60
 invert 0
 pinchpunch 0 1
 multipitch 0 -7,6|{set:e|Scary G-Major}
 {set:m|shiver me timbers!!1111!!! /j}
 invert 0
 multipitch 0 -12,-6,0,6,12|{set:e|G-Major 113}
-hueshitfhsv 0 180
+hueshifthsv 0 180
 invert 0
 hueshiftccs 0 180
 hooh 0
@@ -1862,7 +1862,7 @@ gradientmap 0 black rgb(254,200,150)
 woow 0
 haah 0
 multipitch 0 -3|{set:e|G-Major 105}
-hueshitfhsv 0 0.65*360
+hueshifthsv 0 0.65*360
 woow 0
 multipitch 0 -3|{set:e|Confusing Mirror Tops}
 volume 0 0.25
@@ -1874,7 +1874,7 @@ flip 2
 overlay 0 2 0 0 none 0 0 50
 multipitch 0 -16,-15,-8,-7|{set:e|G-Major 92}
 invert 0
-hueshitfhsv 0 0.28*360 100
+hueshifthsv 0 0.28*360 100
 vegaswave 0 0 0 0 0 0 8 0.077 0
 create 1 w h*0.608 0 0 0 100
 join 0 1 true
@@ -1909,7 +1909,7 @@ rotate 0 90
 tvsimulator 0 0.75
 rotate 0 -90
 swaprgba 0 bgr
-hueshitfhsv 0 0.294*360
+hueshifthsv 0 0.294*360
 multipitch 0 1,-5|{set:e|Extra Scary G-Major}
 {set:m|shiver me timbers!!!1!11!1 /j}
 gradientmap 0 black red white red
@@ -1929,7 +1929,7 @@ huecurvergba 0 all 0 1 0
 contrastmultiply 0 -1
 pinchpunch 0 0.5
 multipitch 0 0,3,5|{set:e|G-Major 157}
-hueshitfhsv 0 0.62*360
+hueshifthsv 0 0.62*360
 invert 0
 waaw 0
 hueshifthsv 0 0 -50
@@ -1942,12 +1942,12 @@ zoomblur 0 1.1
 multipitch 0 -7,-4,0|{set:e|Something}
 invert 0
 swaprgba 0 bgr
-foreachframe 0 0  fc "vegaswave 0 0 10 0.04 0.08 0 1 0.5 idx/fc*6.28"
+vegaswave 0 0 10 0.04 0.08 6.28/d 1 0.5 0
 {set:sr|{traversejson:channels.audio[0].sample_rate|{api.utilities.exif:{video}}}}
 ffmpeg 0 -af atempo=2,atempo=4,asetrate={get:sr}/4,atempo=0.5,aresample={get:sr}
 audiodestroy 0|{set:e|G-Major 112}
 swaprgba 0 bgr
-hueshitfhsv 0 180
+hueshifthsv 0 180
 haah 0
 pinchpunch 0 0.5
 multipitch 0 -8,-4,-3,1|{set:e|G-Major 106}
@@ -1965,10 +1965,10 @@ multipitch 0 12,17,24|{set:e|G-Major 1.5}
 ffmpeg 0 -vf format=yuv444p,geq='p(X*2,Y)',format=yuv420p
 haah 0
 brightness 0 -37.5
-foreachframe 0 0 fc "crop 0 w/(2-idx/fc) h"
+foreachframe 0 0 fc "crop 0x w/(2-idx/fc) h"
 multipitch 0 -8.09,-4.59,0|{set:e|G-Major 140}
 invert 0
-hueshitfhsv 0 180
+hueshifthsv 0 180
 flop 0
 create 1 w*0.152 h 0 0 0 100
 join 0 1
@@ -1980,8 +1980,8 @@ invert 0
 audioreverse 0|{set:e|Wibbly Major}
 ffmpeg 0 -vf format=yuv444p,geq=r='p(X,Y)*2':g='p(X,Y)*2':b='p(X,Y)*2',format=yuv420p -af afreqshift=1000
 vegaswave 0 62.8/d 0.1 0.5 0 62.8/d 0.1 0.5 0
-}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:“|"|{replace:0 0 fc ”|0 0 fc "|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}}}
-you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# “{get:m}”}{if:{arg:0}|=|raw|then:{newline}-# `{get:fx}`}{iferror:{iferror:{sh:
+}}{set:fx|{replace:.mp3 sfx|.mp3 sfx{newline}snip sfx 0.3{newline}repeatduration sfx d|{replace:.mp3 car|.mp3 car{newline}snip car 0.3{newline}repeatduration car d|{replace:hyyps|https|{replace:htps|https|{get:fx}}}}}}
+you got **{get:e}!**{if:{len:{get:m}}|=|0|then:|else:{newline}-# "{get:m}"}{if:{arg:0}|=|raw|then:{newline}-# `{get:fx}`}{iferror:{iferror:{sh:
 load {iv}
 sr=$(ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
 fr=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=nokey=1:noprint_wrappers=1 $FILE_1)
@@ -1996,6 +1996,6 @@ get 0 duration d
 get 0 framecount fc
 {eval:{get:fx}}
 convert 0 video/mp4
-render 0}}|{newline}But something went wrong. It's most likely a timeout or bad syntax.
+render 0}}|... But something went wrong. It's most likely a timeout or bad syntax.
 Try inputting this to see if it will work:
 `.t inft {get:fx}`}
