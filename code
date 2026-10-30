@@ -1989,7 +1989,7 @@ multipitch 0a 0,-3
 audioputreplace 0 0a|{set:e|G-Major 109}
 hueshifthsv 0 0.35*360
 hooh 0
-multipitch 0 3|{set:e|G-Major 59 (Carlos Virgilio)
+multipitch 0 3|{set:e|G-Major 59 (Carlos Virgilio)}
 reverse 0
 flop 0
 detunnel 0
