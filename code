@@ -48,7 +48,7 @@ gray 0
 invert 0
 reverse 0
 multipitch 0 12|{set:e|Sponge}
-gradientmap 0 #ffb000 #ffff00 #00baff #34ffff
+gradientmap 0 #ffb000 yellow #00baff #34ffff
 zoomblur 0 1.1
 multipitch 0 3,9|{set:e|Pitch Black}
 copy 0 1
@@ -60,7 +60,7 @@ blend 0 1 multiply
 blend 0 2 multiply
 multipitch 0 -24|{set:e|Crazy Diamond}
 tvsimulator 0 0.75
-gradientmap 0 blue red #00ff00 white
+gradientmap 0 blue red lime white
 zoomblur 0 1.15
 brightness 0 5
 contrastmultiply 0 2
@@ -86,19 +86,19 @@ vocode 0 car
 pinchpunch 0 1 0.24 0.409
 loadcube https://cdn.discordapp.com/attachments/1502102376440529048/1562413783564030012/infrared.cube inf
 applylut 0 inf|{set:e|Clearer}
-gradientmap 0 #ff1e1e #0f31ff #00d40c #ff4bda #2dffff #ffff00 #000000 #9a0072 #ffffff
+gradientmap 0 #ff1e1e #0f31ff #00d40c #ff4bda #2dffff yellow black #9a0072 white
 load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
 vocode 0 car|{set:e|Helium}
-gradientmap 0 #00ff00 #00ffff #0000ff
+gradientmap 0 lime cyan #0000ff
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563395613482033183/convert.a9fcb2f6.mp3 car
 multipitch 0 6
 vocode 0 car|{set:e|4ormulator V1}
-gradientmap 0 black #f00000 #ffa300 #11f000 #000000 #ffffff
+gradientmap 0 black #f00000 #ffa300 #11f000 black white
 tvsimulator 0 0.964
 load https://cdn.discordapp.com/attachments/1124759616283222146/1493397857875660862/convert.432f828a.mp3 car
 multipitch 0 -5
 vocode 0 car|{set:e|Full Chord}
-gradientmap 0 white #8000ff #54ff9f #00ffff white
+gradientmap 0 white #8000ff #54ff9f cyan white
 load https://cdn.discordapp.com/attachments/1502102376440529048/1562646006535950346/convert.6cb45893.mp3 car
 vocode 0 car|{set:e|Pitch White}
 gradientmap 0 white rgba(255,255,255,0),0.5
@@ -379,7 +379,7 @@ vocode 0 1
 multipitch 0 -8|{set:e|Goodbye Effect}
 haah 0
 woow 0
-gradientmap 0 blue white pink
+gradientmap 0 blue white magenta
 multipitch 0 -1,11|{set:e|Neutral Blast}
 swaprgba 0 0g0
 huecurvergba 0 green 0.273 1
@@ -421,7 +421,7 @@ foreachframe 0 0 fc "cover 0 w/((({get:idx}/fc)**2)+1) h"
 multipitch 0 -3,-8|{set:e|CoNfUsIoN 2.0}
 contrastmultiply 0 -1
 audioreverse 0|{set:e|X-Major 159}
-gradientmap 0 white pink black
+gradientmap 0 white magenta black
 multipitch 0 -5,7|{set:e|G-Major 305}
 hueshifthsv 0 120
 multipitch 0 12,-7|{set:e|N-Major 45}
@@ -429,7 +429,7 @@ swaprgba 0 grb
 waaw 0
 hooh 0
 pinchpunch 0 0.5
-multipitch 0 4,-8|{set:e|This Is What Happens If X Crashes}
+multipitch 0 4,-8|{set:e|This Will Happen If X Crashes}
 speed 0 4
 hueshifthsv 0 -60
 pinchpunch 0 -1
@@ -458,11 +458,11 @@ fadein 1 d
 fadeout 0 d
 blend 0 1 add|{set:e|Clearer 2}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1562995216967925801/convert.21fa4ec8.mp3 ct
-gradientmap 0 #2fff00 #00ffff #ffff00 #ffffff #ff0000 #ff80f6 #000000 #64e132 #ffffff
+gradientmap 0 #2fff00 cyan yellow white red #ff80f6 black #64e132 white
 vocode 0 ct|{set:e|Group}
 load https://cdn.discordapp.com/attachments/1516287797823148052/1553441082031743056/convert.2a4205c1.mp3 gp
 vocode 0 gp
-gradientmap 0 black #00ffff blue black|{set:e|Autovocoding}
+gradientmap 0 black cyan blue black|{set:e|Autovocoding}
 gradientmap 0 blue green black white
 copy 0 1
 multipitch 1 -12
@@ -496,10 +496,10 @@ hueshifthsv 0 -5
 vegaswave 0 0 10 0.01 0 0 10 0.01 0
 multipitch 0 0.01|{set:e|Clearer Helium}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563274750015316019/convert.c49cd2a2.mp3 sfx
-gradientmap 0 #00ff00 blue cyan red white pink yellow #00ff00 black
+gradientmap 0 lime blue cyan red white magenta yellow lime black
 vocode 0 sfx|{set:e|Power}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563274965892210879/convert.b12b0411.mp3 car
-gradientmap 0 pink blue cyan
+gradientmap 0 magenta blue cyan
 vocode 0 car|{set:e|Loudness}
 gradientmap 0 #ff8000 black red
 audiodestroy 0|{set:e|RjGunner111 Major}
@@ -524,11 +524,11 @@ speed 1 1.05
 snip 1 0 d
 audioputreplace 0 1
 vocode 0 car |{set:e|Talking Of Flutes}
-load https://cdn.discordapp.com/attachments/1502102376440529048/1563275349079629885/convert.04799698.mp3 car
-gradientmap 0 pink #00ff00 cyan white
+load https://cdn.discordapp.com/attachments/1565512218894925944/1565937558746038293/convert.04799698.mp3 car
+gradientmap 0 magenta lime cyan white
 vocode 0 car|{set:e|Videoup V0}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563275977549815850/convert.97d7b14b.mp3 car
-gradientmap 0 white blue pink #00ff00 black
+gradientmap 0 white blue magenta lime black
 vocode 0 car|{set:e|Videoup V1}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563276110366769313/convert.a1cffb28.mp3 car
 gradientmap 0 white blue black
@@ -609,7 +609,7 @@ multipitch 0 -12,-5,0,4.7,12
 invert 1
 cover 1 w/1.02 h/1.02
 resize 1 w h
-overlay 0 1 0 0 #000000 0 0 50|{set:e|F-Major}
+overlay 0 1 0 0 black 0 0 50|{set:e|F-Major}
 tvsimulator 0 0.75
 hueshiftccs 115.102
 invert 0
@@ -684,11 +684,11 @@ gradientmap 0 rgba(0,0,0,0),0.45 black,0.55
 hueshifthsv 0 0 -65 -33
 copy 0 1
 flop 0
-overlay 0 1 0 0 #ffffff 0.1 0.1 90
+overlay 0 1 0 0 white 0.1 0.1 90
 multipitch 0 -12,-7,0,5,12,17|{set:e|Mirror and Other}
 flop 1
 volume 1 0
-overlay 0 1 0 0 #000000 0 0 false 50
+overlay 0 1 0 0 black 0 0 false 50
 multipitch 0 -8,-7|{set:e|Mirror and Other 2.0}
 flop 0
 rotate 1 90
@@ -698,8 +698,8 @@ resize 2 w h
 flop 2
 volume 2 0
 volume 1 0
-overlay 1 2 0 0 #000000 0 0 false 50
-overlay 0 1 0 0 #000000 0 0 false 30
+overlay 1 2 0 0 black 0 0 false 50
+overlay 0 1 0 0 black 0 0 false 30
 multipitch 0 -1,2|{set:e|Vicious G-Major}
 tvsimulator 0 0.75
 cover 0 w h/2
@@ -759,7 +759,7 @@ load https://cdn.discordapp.com/attachments/1502102376440529048/1563275349079629
 foreachframe 0 0 fc "rotate 0 -20*idx/fc none true"
 swirl 0 -130
 audioputreplace 0 sfx|{set:e|Colorama}
-gradientmap 0 red yellow #00ff00 cyan blue pink red
+gradientmap 0 red yellow lime cyan blue magenta red
 audioreverb 0 1 10 0.5
 audioreverb 0 1 20 0.5
 audioreverb 0 1 30 0.5
@@ -802,14 +802,14 @@ flop 0
 vegaswave 0 -18.85 10 0.01 0 18.85 10 0.01 0
 multipitch 0 0,-5|{set:e|X1F7}
 flop 0
-gradientmap 0 white red #00ff00 blue rgba(0,0,0,0)
+gradientmap 0 white red lime blue rgba(0,0,0,0)
 tvsimulator 0 0.75
 foreachframe 0 0 fc "vegaswave 0x 0 0 0 0 0 4.19 0.027 0.8+idx/fc*3.873"
 audiodestroy 0
 multipitch 0 -4|{set:e|X Wants To Scare You}
 foreachframe 0 0 fc "rotate 0x -((1080*idx/fc)%360) none true"
 foreachframe 0 0 fc "crop 0x (w-1)*(1-idx/fc)+23 (h-1)*(1-idx/fc)+13 w*idx/fc/2 h*idx/fc/2"
-gradientmap 0 red yellow #00ff00 cyan blue #ff00ff red
+gradientmap 0 red yellow lime cyan blue #ff00ff red
 audiodestroy 0
 multipitch 0 -4|{set:e|Superior Light Rays}
 rotate 0 10 none true
@@ -973,7 +973,8 @@ swaprgba 0 bgr
 multipitch 0 -8,16|{set:e|Poplar Forest Major}
 gradientmap 0 rgb(255,155,0) rgb(255,126,85) red
 multipitch 0 -5.75,5.75|{set:e|G-Major 545}
-vegaswave 0 0 10.9 0.054 0 0 5.49 0.054 0|{set:e|Stancuic Major 6}
+vegaswave 0 0 5.45 0.054 0 0 10.9 0.054 0
+multipitch 0 -10,0,4|{set:e|Stancuic Major 6}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563716345592414228/IMG_2761.webp ov
 rotate 0 33.158
 waaw 0
@@ -991,7 +992,7 @@ load https://cdn.discordapp.com/attachments/1502102376440529048/1563983075350945
 gradientmap 0 white blue white
 vocode 0 car|{set:e|Electronic Sounds 2.0}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563983075350945843/convert.b3931edc.mp3 car
-gradientmap 0 rgb(0,19,50) cyan #00ff00
+gradientmap 0 rgb(0,19,50) cyan lime
 vocode 0 car
 multipitch 0 0,3|{set:e|Electronic Sounds 3.0}
 load https://cdn.discordapp.com/attachments/1502102376440529048/1563983075350945843/convert.b3931edc.mp3 car
@@ -1145,7 +1146,7 @@ multipitch 0 16|{set:e|G-Major 27}
 tvsimulator 0 0.5
 huecurvergba 0 all 0,0.355 1,0.365
 gray 0
-gradientmap 0 #00ff00,0.45 #ffff00,0.5
+gradientmap 0 lime,0.45 yellow,0.5
 multipitch 0 0,7,4,-12,4,-5,-8,3,2,6|{set:e|G-Major 29}
 gradientmap 0 rgba(0,0,0,0),0.5 black,1
 swaprgba 0 bgr
@@ -1176,7 +1177,7 @@ multipitch 0 0,-3,-6,-8|{set:e|G-Major 33}
 invert 0
 swaprgba 0 0g0
 huecurvergba 0 green 0.27 1
-gradientmap 0 pink,0 rgba(255,0,255,0),0.5
+gradientmap 0 magenta,0 rgba(255,0,255,0),0.5
 ffmpeg 0 -vf format=yuv444p,geq='p(X,mod(Y+T*H*1.2,H))',format=yuv420p
 tvsimulator 0 0.666
 multipitch 0 0,-7,4.5,8.67|{set:e|G-Major 34}
@@ -1483,7 +1484,7 @@ flop 0
 invert 0
 hueshifthsv 0 180
 multipitch 0 -36|{set:e|G-Major 337 (P OSO)}
-gradientmap 0 black orange pink orange pink orange pink
+gradientmap 0 black orange magenta orange magenta orange magenta
 swaprgba 0 grb
 multipitch 0 -48|{set:e|Super Slow}
 gradientmap 0 black red white
@@ -1952,7 +1953,7 @@ haah 0
 pinchpunch 0 0.5
 multipitch 0 -8,-4,-3,1|{set:e|G-Major 106}
 flop 0
-gradientmap 0 #ff1e1e #0f31ff #00d40c #ff4bda #2dffff #ffff00 #000000 #9a0072 #ffffff
+gradientmap 0 #ff1e1e #0f31ff #00d40c #ff4bda #2dffff yellow black #9a0072 white
 load https://media.discordapp.net/attachments/1120656275869536286/1533841769970532516/snip.1180ab19.mp3 car
 vocode 0 car
 huecurvergba 0 all 0,0.595 1,0.605|{set:e|G-Major 795}
